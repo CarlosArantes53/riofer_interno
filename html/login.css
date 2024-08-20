@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body{
+    background-color: #F5F5F7;
+    background-size:cover;   
+    background-position: center;
+}
+.formulario > img{
+    position: relative;
+    bottom: 15px;
+    width: 280px;
+    height: 200px;
+    cursor: pointer;
+}
+.formulario {
+    position: relative;
+    top: 120px;
+    background: rgb(255, 255, 255);
+    border:2px solid rgba(211, 211, 211, 0.493) ;
+    border-radius: 8px;
+    max-width: 500px; /* Ajuste o máximo conforme necessário */
+    text-align: center;
+    margin: 0 auto; /* Centraliza o formulário na página */
+    backdrop-filter: blur(20px);
+    color: rgb(0, 0, 0);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.301);
+}
+.campo{
+    position: relative;
+    bottom: 55px;
+    margin-bottom: 10px; /* Espaçamento entre campos */
+    font-family: 'poppins' sans-serif;
+}
+.campo .images{
+    cursor: pointer;
+}
+.campo img{
+    position: absolute;
+    right: 89px;
+    margin-top: 9px;
+}
+.campo button{
+    background: black ;
+    color: #fff ;
+    padding: 14px;
+    border: none;
+    width: calc(100% - 110px);
+    border-radius: 10px;
+    position: relative;
+    left: 3px;
+    cursor: pointer;
+}
+
+@keyframes anima{
+    0%{
+        transform: scale(1);
+    }
+
+    100%{
+        transform: scale(1.05);
+    }
+}
+
+button:hover{
+    animation-name: anima;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+label {
+    display: inline-block;
+   
+}
+input {
+    width: calc(100% - 110px); /* Calcula a largura dos inputs considerando o width do label */
+    box-sizing: border-box; /* Garante que padding não aumente a largura */
+    border-radius: 10px;
+    background: transparent;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(211, 211, 211, 0.493);
+}
+input::placeholder{
+    color: #8a8a8a;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+}
+input:focus{
+    border: 3px solid grey;
+}
+@media only screen and (max-width: 600px) {
+    
+}
