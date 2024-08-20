@@ -1,4 +1,5 @@
 const db = firebase.firestore();
+
 const treinamentosRef = db.collection("Treinamentos");
 
 function listarCursos() {
@@ -16,9 +17,11 @@ function listarCursos() {
       cursosList.appendChild(listItem);
     });
   }).catch((error) => {
-    console.error("Erro ao listar cursos:", error);
+    console.error("Erro ao listar cursos: ", error);
   });
 }
+
+listarCursos();
 
 auth.onAuthStateChanged((user) => {
   if (user) {
