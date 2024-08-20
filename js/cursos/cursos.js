@@ -24,6 +24,6 @@ auth.onAuthStateChanged((user) => {
   if (user) {
     listarCursos();
   } else {
-    window.location.href = '../html/home.html';
+    window.location.href = '../html/login.html';
   }
 });
