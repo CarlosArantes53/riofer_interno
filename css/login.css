@@ -83,7 +83,7 @@ input {
     padding: 10px;
     border: none;
     outline: none;
-    border: 2px solid rgba(211, 211, 211, 0.493);
+    border: 3px solid rgba(211, 211, 211, 0.493);
 }
 input::placeholder{
     color: #8a8a8a;

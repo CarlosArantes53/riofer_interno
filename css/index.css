@@ -1,0 +1,414 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    
+
+}
+body{
+    background: #ffffff;
+    color: white;
+    font-size: 12px;
+    overflow: hidden;    
+}   
+header{
+    width: 35%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: auto ;
+    z-index: 1;
+    position: relative;
+    top: 25px;
+    list-style: none;
+    background-color: rgba(0, 0, 0, .1);
+    backdrop-filter: blur(50px);
+    border-radius: 20px;
+}
+
+ul li{
+    display: inline-block;
+    position: relative;
+}
+ul li a{
+    display: block;
+    padding: 20px 25px;
+    color:#fff;
+    text-decoration: none;
+    text-align: center;
+    font-size: 20px;
+    transition: 0.4s ;
+    cursor: pointer;
+}
+ul li ul.dropdown li{
+    display: block;
+}
+ul li ul.dropdown{
+    width: 100%;
+    background-color: #000000;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 999;
+    display: none;
+}
+ul li:hover ul.dropdown{
+    position: absolute;
+    top: 0;
+}
+ul li a:hover{
+    background-color: rgb(255, 255, 255);
+    color: black;
+    border-radius: 20px;
+}
+.icon-suspend{
+    position: relative;
+    top: 4px;
+}
+ul li:hover ul.dropdown{
+    display: block;
+}
+
+header{
+    transform: translateY(50px);
+    filter: blur(20px);
+    opacity: 0;
+    animation-delay: 1s;
+    animation: animationHt 0.5s 0.4s linear 1 forwards;
+}
+@keyframes animationHt{
+    to{
+        transform: translateY(0);
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+
+
+
+header > ul > li{
+    transform: translateY(50px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent 0.5s 1s linear 1 forwards;
+}
+@keyframes showContent{
+    to{
+        transform: translateY(0);
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+.dropdown  li{
+transform: translateY(50px);
+filter: blur(20px);
+opacity: 0;
+animation-delay: 0.3s;
+animation: showTop 0.5s 0.5s linear 1 forwards;
+}
+@keyframes showTop{
+to{
+    transform: translateY(0);
+    filter: blur(0);
+    opacity: 1;
+}
+}
+
+
+.dropdown{
+    transform: translateY(50px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showl 0.5s 0.1s linear 1 forwards;
+    }
+    @keyframes showl{
+    to{
+        transform: translateY(0);
+        filter: blur(0);
+        opacity: 1;
+    }
+    }
+    
+
+@media screen and (max-width: 1460px){
+    ul li a{
+        display: none;
+    }
+    .text-home {
+        display: block;
+    }
+    header{
+        justify-content: left;
+        width: 55%;
+    }    
+    
+}
+.mobile-menu-icon{
+    display: none;
+}
+.mobile-menu{
+    display: none;
+}
+.container{
+    height: 100vh;
+    width: 100vw;
+    margin-top: -70px;
+}
+
+.container .list .list-item{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.container .list .list-item img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    filter: brightness(50%);
+}
+.container .list .list-item .content{
+    position: absolute;
+    top: 20%;
+    right: 10%;
+    padding-right: 10%;
+    width: 80%;
+    color: white;
+    text-shadow: 0 5px 10px #0004;
+}
+.container .list .list-item .title{
+    font-size: 5em;
+    font-weight: 700;
+    line-height: 1.3em;
+}
+.container .list .list-item .description{
+    font-size: 1.5em;
+}
+.container .list .list-item .buttons{
+    display: grid;
+    grid-template-columns: repeat(2, 130px);
+    grid-template-rows: 40px;
+    margin-top: 20px;
+    gap: 5px;
+    animation: botaoanima 0.5s 0.4s linear 1 forwards;
+}
+@keyframes botaoanima{
+    from{
+        transform: translateY(50px);
+        filter: blur(20px);
+        opacity: 0;
+    }
+}
+.container .list .list-item .buttons button{
+    border: none;
+    background-color: white;
+    letter-spacing: 3px;
+    font-weight: 500;
+    cursor: pointer;
+    text-transform: uppercase;
+    animation: botaoanima 0.5s 0.4s linear 1 forwards;
+}
+.container .list .list-item .buttons button:nth-child(2){
+    background-color: transparent;
+    border: solid white 1px;
+    color: white;
+}
+.container .list .list-item .buttons button:hover{
+    background-color: transparent;
+    border: solid 1px white;
+    color: white;
+    transition: 0.7s;
+}
+.container .list .list-item .buttons button:nth-child(2):hover{
+    background-color: white;
+    color: black;
+}
+.container .thumb{
+    position: absolute;
+    bottom: 50px;
+    left: 47%;
+    display: flex;
+    gap: 20px;
+    transform: translateY(120px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: thumbanima 0.5s 1s linear 1 forwards;
+}
+@keyframes thumbanima{
+    to{
+        transform: translateY(0);
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+.container .thumb .thumb-item{
+    width: 135px;
+    height: 200px;
+    position: relative;
+    z-index: 3;
+}
+.container .thumb .thumb-item img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    border-radius: 10px;
+    filter: brightness(80%);
+}
+.container .thumb .content{
+     position: absolute;
+     bottom: 10px;
+     left: 10px;
+}
+.container .arrows{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    bottom: 135px;
+    left: 180px;
+    width: 300px;
+}
+.container .arrows button{
+    border-radius: 10px;
+    border: none;
+    padding: 12px 17px;
+    background-color: #eee4;
+    color: white;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1.5em;
+    transform: translateY(50px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: effectNextThumb 0.5s 0.8s linear 1 forwards;
+}
+
+@keyframes effectNextThumb{
+    to{
+        transform: translateY(0);
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+
+
+.container .arrows button:hover{
+    background-color: white;
+    color: black;
+    transition: 0.7s;
+}
+
+/*movimento ultima thumb*/
+
+.container.next .thumb .thumb-item:nth-last-child(1){
+    animation: effectLastThumb 0.5s linear 1 forwards;
+}
+
+@keyframes effectLastThumb{
+    from{
+        width: 0;
+        opacity: 0;
+    }
+}
+
+/*textos principais*/
+
+.container .list .list-item:nth-last-child(1) .content .title,
+.container .list .list-item:nth-last-child(1) .content .description,
+.container .list .list-item:nth-last-child(1) .content .buttons{
+    transform: translateY(50px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent 0.5s 1s linear 1 forwards;
+}
+
+@keyframes showContent{
+    to{
+        transform: translateY(0);
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+
+.container .list .list-item:nth-last-child(1) .content .title{
+    animation-delay: 1.2s;
+}
+.container .list .list-item:nth-last-child(1) .content .description{
+    animation-delay: 1.6s;
+}
+.container .list .list-item:nth-last-child(1) .content .buttons{
+    animation-delay: 2s;
+}
+
+.container.next .list .list-item:nth-last-child(1) img{
+    width: 150px;
+    height: 220px;
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    border-radius: 30px;
+    animation: showMainImage 0.5s linear forwards;
+}
+@keyframes showMainImage{
+    to{
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+}
+/*imagem principal Back*/
+
+.container.back .list .list-item:nth-child(1) img{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    animation: hideMainImage 0.5s linear 1 forwards;
+    z-index: 2;
+}
+
+@keyframes hideMainImage{
+    to{
+        width: 135px;
+        height: 200px;
+        border-radius: 10px;
+        left: 47%;
+        bottom: 50px; 
+    }
+}
+@media screen and (max-width: 800px){
+    .container .list .list-item .content{
+        top: 10%;
+    }
+    .container .thumb{
+        bottom: 60px;
+    left: 25px;
+    gap: 5px;
+        
+    }
+    .container .list .list-item .description{
+        font-size: 1.0em;
+    }
+    header a{
+        margin-right: 15px;
+    }
+}
+@media screen and (max-width: 1150px){
+    .container .thumb .thumb-item{
+        width: 85px;
+        height: 160px;
+    }
+    .container .arrows{
+        bottom: 250px;
+        left: 155px;
+    }
+}
+   
+ 
+    
+    
