@@ -99,19 +99,7 @@ button[type="submit"]{
     cursor: pointer;
     transition: .3s;
 }
-@keyframes anima{
-    0%{
-        transform: scale(1);
-    }
 
-    100%{
-        transform: scale(1.05);
-    }
-}
-
-button{
-    animation: anima 0.5s ease-in-out infinite alternate;
-}
 button[type="submit"]:hover{
     background-color: #ff7300;
 }
