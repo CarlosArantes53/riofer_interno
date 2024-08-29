@@ -1,5 +1,5 @@
 function redirectToHome() {
-    window.location.href = "/html/home.html";
+    window.location.href = "/paginas/home/home.html";
 }
 
 function redirectToLogin() {

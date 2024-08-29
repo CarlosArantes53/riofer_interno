@@ -16,7 +16,7 @@ body{
     overflow: hidden;    
 }   
 header{
-    width: 35%;
+    width: 55%;
     height: 70px;
     display: flex;
     align-items: center;
@@ -59,17 +59,24 @@ ul li ul.dropdown{
 }
 ul li:hover ul.dropdown{
     position: absolute;
-    top: 0;
+    top: 1;
 }
 ul li a:hover{
     background-color: rgb(255, 255, 255);
     color: black;
-    border-radius: 20px;
+    border-radius: 10px;
 }
 .icon-suspend{
     position: relative;
     top: 4px;
 }
+span.icon-set {
+    display: inline-block;
+    transform: rotate(90deg);
+    font-weight: 600;
+    
+}
+
 ul li:hover ul.dropdown{
     display: block;
 }
@@ -118,14 +125,14 @@ to{
     opacity: 1;
 }
 }
-
-
 .dropdown{
+
     transform: translateY(50px);
     filter: blur(20px);
     opacity: 0;
     animation: showl 0.5s 0.1s linear 1 forwards;
     }
+
     @keyframes showl{
     to{
         transform: translateY(0);
@@ -133,21 +140,7 @@ to{
         opacity: 1;
     }
     }
-    
 
-@media screen and (max-width: 1460px){
-    ul li a{
-        display: none;
-    }
-    .text-home {
-        display: block;
-    }
-    header{
-        justify-content: left;
-        width: 55%;
-    }    
-    
-}
 .mobile-menu-icon{
     display: none;
 }
@@ -268,7 +261,7 @@ to{
     align-items: center;
     gap: 10px;
     position: absolute;
-    bottom: 135px;
+    bottom: 85px;
     left: 180px;
     width: 300px;
 }

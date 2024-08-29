@@ -78,7 +78,7 @@ button.button-Harassment:hover{
     content: "";
     background: linear-gradient(
         45deg,
-        #ffffff96, #FFFB0A, #110A04, #E0DD00
+        #00000096, #FFFB0A, #110A04, #E0DD00
     );
     position: absolute;
     top: -2px;
@@ -87,7 +87,7 @@ button.button-Harassment:hover{
     z-index: -1;
     width: calc(100% + 4px);
     height: calc(100% + 4px);
-    filter: blur(8px);
+    filter: blur(1px);
     animation: glowing 20s linear infinite;
     transition: opacity .3s ease-in-out;
     opacity: 0;
@@ -107,71 +107,17 @@ button.button-Harassment:hover{
     100%{background-position: 0 0;}
 }
 
-section.footer-icons{
+
+
+section,.footer-icons{
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
     justify-content: center;
-    margin-top: 22.3rem;
+    align-items: end;
     width: 100%;
-    
-}
-/*telas menores 400px*/
-@media only screen and (max-width: 415px){
-    section.footer-icons{
-        margin-top: 14rem;
-    }
-}
-/*telas menores 395px*/
-@media only screen and (max-width: 395px){
-    section.footer-icons{
-        margin-top: 22rem;
-    }
+    height: 35vh;
+    padding-top: 10rem;
 }
 
-
-
-/*telas menores 440px*/
-@media only screen and (max-width: 440px){
-    section.footer-icons{
-        margin-top: 25rem;
-    }
-}
-
-/*telas menores 550px*/
-@media only screen and (max-width: 550px){
-    section.footer-icons{
-        margin-top: 15rem;
-    }
-}
-
-/*telas menores 370px*/
-@media only screen and (max-width: 370px){
-    section.footer-icons{
-        margin-top: 16rem;
-    }
-}
-
-/*telas menores 350px*/
-@media only screen and (max-width: 350px){
-    section.footer-icons{
-        margin-top: 22rem;
-    }
-}
-
-/*telas maiores 1030px*/
-@media only screen and (max-width: 1030px){
-    section.footer-icons{
-        margin-top: 8.5rem;
-    }
-}
-
-/*telas maiores 1290px*/
-@media only screen and (max-width: 1290px){
-    section.footer-icons{
-        margin-top: 20rem;
-    }
-}
 
 .footer-icons .share img{
     width: 60px;
