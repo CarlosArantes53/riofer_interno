@@ -1,32 +1,35 @@
 const db = firebase.firestore();
-
 const treinamentosRef = db.collection("Treinamentos");
 
-function listarCursos() {
-  treinamentosRef.get().then((querySnapshot) => {
-    const cursosList = document.getElementById("cursos-list");
-    cursosList.innerHTML = "";
+document.getElementById('curso-form').addEventListener('submit', function(e) {
+    e.preventDefault();
 
-    querySnapshot.forEach((doc) => {
-      const curso = doc.data();
-      const listItem = document.createElement("li");
-      listItem.innerHTML = `
-        <h3>${curso.Titulo}</h3>
-        <a href="${curso.Link}" target="_blank">Acessar Curso</a>
-      `;
-      cursosList.appendChild(listItem);
+    const titulo = document.getElementById('titulo').value;
+    const descricao = document.getElementById('descricao').value;
+    const categoria = document.getElementById('categoria').value;
+    const linkUtil = document.getElementById('linkUtil').value;
+    const linkFormulario = document.getElementById('linkFormulario').value;
+
+    treinamentosRef.add({
+        Titulo: titulo,
+        Descricao: descricao,
+        Categoria: categoria,
+        LinkUtil: linkUtil,
+        LinkFormulario: linkFormulario
+    }).then(() => {
+        alert('Curso cadastrado com sucesso!');
+        listarCursos();
+        document.getElementById('curso-form').reset();
+    }).catch((error) => {
+        console.error("Erro ao cadastrar curso: ", error);
+        alert('Erro ao cadastrar curso, tente novamente.');
     });
-  }).catch((error) => {
-    console.error("Erro ao listar cursos: ", error);
-  });
-}
-
-listarCursos();
+});
 
 auth.onAuthStateChanged((user) => {
-  if (user) {
-    listarCursos();
-  } else {
-    window.location.href = '../html/login.html';
-  }
+    if (user) {
+        listarCursos();
+    } else {
+        window.location.href = '../html/login.html';
+    }
 });
