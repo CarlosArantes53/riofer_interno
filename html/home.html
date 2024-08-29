@@ -1,14 +1,126 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <a  href="https://icons8.com/icon/59864/mais"></a><a href="https://icons8.com"></a>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+HR:wght@100..400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+icons" rel="stylesheet">
+    <title>Document</title>
 </head>
 <body>
-    <h2>Riofer</h2>
-    <button id="logout">Logout</button>
-    <button onclick="window.location.href='cursos.html'">Cursos</button>
+
+    <header>
+        <ul>
+            <li><a class="text-home" id="logout" href="#">Logout</a></li>
+            <li><a onclick="window.location.href='cursos.html'">Cursos</a></li>
+            <li><a onclick="window.location.href='cadastroTreinamento.html'">Cadastrar Treinamento</a></li>
+            <li>
+                <a class="text-chamados" href="#">Chamados <img class="icon-suspend" width="20" height="20" src="https://img.icons8.com/metro/20/ffffff/expand-arrow.png" alt="expand-arrow"/></a>
+                <ul class="dropdown">
+                    <li><a href="formulario.html">Criar</a></li>
+                    <li><a href="#">Visualizar</a></li>
+                </ul>
+            </li>
+    </header>
+
+
+    <main class="container">
+        <div class="list">
+            <div class="list-item">
+                <img src="img/e43a4d128c9a9560294a5da3b6814bef.jpg">
+                <div class="content">
+                    <h2 class="title">Bali</h2>
+                    <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus fugiat omnis doloribus ipsam incidunt. Vel obcaecati repellendus sint sapiente, unde quaerat tempora natus dolorem tempore. Quo deserunt consequatur fugit hic.</p>
+                    <div class="buttons">
+                       <button>saiba mais</button>
+                       <button>acessar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="list-item">
+                <img src="img/maxresdefault.jpg">
+                <div class="content">
+                    <h2 class="title">Riofer</h2>
+                    <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus fugiat omnis doloribus ipsam incidunt. Vel obcaecati repellendus sint sapiente, unde quaerat tempora natus dolorem tempore. Quo deserunt consequatur fugit hic.</p>
+                    <div class="buttons">
+                       <button>saiba mais</button>
+                       <button>acessar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="list-item">
+                <img src="img/riofer.jpg">
+                <div class="content">
+                    <h2 class="title">Riofer</h2>
+                    <p class="description">A qualidade, variedade, rapidez e segurança nas nossas operações são obtidas pelo constante investimento no processo produtivo. Nós somos a Riofer Industrial, estamos evoluindo a cada dia, construindo um futuro de aço com você.</p>
+                    <div class="buttons">
+                       <button>saiba mais</button>
+                       <button>acessar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="list-item">
+                <img src="img/Cópia de RH - TREINAMENTO.jpg">
+                <div class="content">
+                    <h2 class="title">Riofer</h2>
+                    <p class="description">Sediada em uma moderna e confortável estrutura em Rio Verde - GO e com uma filial em Jataí - GO, a Riofer é considerada referência no seu segmento gerando mais de noventa empregos diretos.
+                        Com uma área total de 5.208m², nosso parque fabril está equipado com todas as ferramentas necessárias para o desempenho das atividades: desbobinador, guilhotinas, dobradeiras, perfiladeiras, pontes rolantes, empilhadeiras ferramentas e demais soluções. A frota da empresa é própria e renovada com frequência contando com caminhões guindastes para o transporte de grande quantidade, isso garante maior agilidade na entrega dos produtos.</p>
+                    <div class="buttons">
+                       <button>saiba mais</button>
+                       <button>acessar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="thumb">
+
+            <div class="thumb-item">
+                <img src="img/e43a4d128c9a9560294a5da3b6814bef.jpg" alt="foto-cidade">
+                <div class="content">
+                    <h3>Bali</h3>
+                    <p>Visite Bali</p>
+                </div>
+            </div>
+
+            <div class="thumb-item">
+                <img src="img/maxresdefault.jpg" alt="foto-cidade">
+                <div class="content">
+                    <h3>Riofer</h3>
+                    <p>Visite Riofer</p>
+                </div>
+            </div>
+
+            <div class="thumb-item">
+                <img src="img/riofer.jpg" alt="foto-cidade">
+                <div class="content">
+                    <h3>Riofer</h3>
+                    <p>Visite Riofer</p>
+                </div>
+            </div>
+
+            <div class="thumb-item">
+                <img src="img/Cópia de RH - TREINAMENTO.jpg" alt="foto-riofer">
+                <div class="content">
+                    <h3>Riofer</h3>
+                    <p>Visite Riofer</p>
+                </div>
+            </div>
+        </div>
+
+<div class="arrows">
+    <button class="back"> < </button>
+    <button class="next"> > </button>
+</div>
+
+    </main>
 
     <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-auth-compat.js"></script>
@@ -17,6 +129,8 @@
     <script src="../js/auth/firebase_config.js"></script>
     <script src="../js/auth/auth.js"></script>
     <script src="../js/redirect/redirect.js"></script>
+    <script src="../js/thumb/scripts.js"></script> 
+
     <script>
         auth.onAuthStateChanged(user => {
             if (!user) {
@@ -31,4 +145,4 @@
         });
     </script>
 </body>
-</html>
+</html
