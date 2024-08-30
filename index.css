@@ -4,15 +4,70 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 *{
-    padding: auto;
+    padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-
 body{
     background-color: #F5F5F7;
     overflow: scroll;
 }
+main > img{
+    width: 280px;
+    height: 200px;
+    cursor: pointer;
+}
+
+section.Login-conect{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    position: relative;
+    bottom: 50px;
+}
+.container-father{
+    margin-right: 15%;
+    background-color: #13222b;
+    border: rgb(190, 162, 2) solid 5px;
+    display: flex;
+    flex-direction: column;
+    padding: 100px 40px;
+    border-radius: 30px;
+}
+input{
+    padding:10px;
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+    outline: none;
+    border: none;
+    background-color: #fff;
+}
+.campo-user img{
+    position: absolute;
+    right: 430px;
+    top: 105px;
+}
+.campo-senha img{
+    position: absolute;
+    top: 145px;
+    right: 430px;
+}
+.container-father button{
+    margin-top: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    font-size: 18px;
+    padding: 5px;
+    outline: 0;
+    border: 0;
+}
+.Login-conect a{
+    margin-top: 10px;
+    text-align: center;
+    color: #fff;
+}
+
 footer{
     border-top: rgba(128, 128, 128, 0.418) solid 3px;
     background-color: #fff;
@@ -25,11 +80,7 @@ footer{
     bottom: 0;
     cursor: pointer;
 }
-@media screen and (max-width: 350px){
-    footer{
-        height: 50px;
-    }
-}
+
 .text-rights{
     font-size: 15px;
     text-align: center;
@@ -37,191 +88,4 @@ footer{
     margin-left: 5px;
     font-weight: 500;
     color: #8a8a8a;
-}
-
-button.button-Harassment{
-    position: absolute;
-    bottom: 150px;
-    right: 67px;
-    cursor: pointer;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.301);
-}
-button.button-Harassment:hover{
-    box-shadow: 0 0 0;
-}
-
-
-.button-Harassment{
-    background-color: gold;
-    border: none;
-    z-index: 1;
-    outline: none;
-    color: #000;
-    padding: 20px;
-    font-size: 20px;
-    font-family: "Roboto", sans-serif;
-    text-transform: capitalize;
-    letter-spacing: 3px;
-    font-weight: 430;
-}
-.button-Harassment::after{
-    content: "";
-    z-index: 1;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: gold;
-    left: 0;
-    top: 0;
-}
-.button-Harassment::before{
-    content: "";
-    background: linear-gradient(
-        45deg,
-        #00000096, #FFFB0A, #110A04, #E0DD00
-    );
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    background-size: 600%;
-    z-index: -1;
-    width: calc(100% + 4px);
-    height: calc(100% + 4px);
-    filter: blur(1px);
-    animation: glowing 20s linear infinite;
-    transition: opacity .3s ease-in-out;
-    opacity: 0;
-}
-.button-Harassment:hover::before{
-    opacity: 1;
-}
-.button-Harassment:hover{
-    color: #fff;
-}
-.button-Harassment::after{
-    background: transparent;
-}
-@keyframes glowing{
-    0%{background-position: 0 0;}
-    50%{background-position: 400% 0;}
-    100%{background-position: 0 0;}
-}
-
-
-
-section,.footer-icons{
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    width: 100%;
-    height: 35vh;
-    padding-top: 10rem;
-}
-
-
-.footer-icons .share img{
-    width: 60px;
-    height: 60px;
-    cursor: pointer;
-    border-radius: 50%;
-    padding: 1rem;
-    transition: 0.4s linear;
-}
-.footer-icons .share img:hover{
-    background-color: gold;
-}
-.footer-icons a{
-    border: none;
-    text-decoration: none;
-    outline: none;
-}
-.formulario > img{
-    position: relative;
-    bottom: 15px;
-    width: 280px;
-    height: 200px;
-    cursor: pointer;
-}
-.formulario {
-    position: relative;
-    top: 120px;
-    background: rgb(255, 255, 255);
-    border:2px solid rgba(211, 211, 211, 0.493) ;
-    border-radius: 10px;
-    max-width: 500px; /* Ajuste o máximo conforme necessário */
-    text-align: center;
-    margin: 0 auto; /* Centraliza o formulário na página */
-    backdrop-filter: blur(20px);
-    color: rgb(0, 0, 0);
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.301);
-}
-.campo{
-    position: relative;
-    bottom: 55px;
-    margin-bottom: 10px; /* Espaçamento entre campos */
-    font-family: 'poppins', sans-serif;
-}
-.campo .images{
-    cursor: pointer;
-}
-.campo img{
-    position: absolute;
-    right: 89px;
-    margin-top: 9px;
-}
-.campo button{
-    background: black ;
-    color: #fff ;
-    padding: 14px;
-    border: none;
-    width: calc(100% - 110px);
-    border-radius: 10px;
-    cursor: pointer;
-    position: relative;
-    left: 2px;
-}
-
-@keyframes anima{
-    0%{
-        transform: scale(1);
-    }
-
-    100%{
-        transform: scale(1.05);
-    }
-}
-.campo button:focus{
-cursor: wait;
-}
-
-.campo button:hover{
-    animation-name: anima;
-    animation-duration: 0.5s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count:infinite;
-    animation-direction:alternate;
-}
-label {
-       display: inline-block;
-}
-input {
-    width: calc(100% - 110px); /* Calcula a largura dos inputs considerando o width do label */
-    box-sizing: border-box; /* Garante que padding não aumente a largura */
-    border-radius: 10px;
-    background: transparent;
-    padding: 10px;
-    border: none;
-    outline: none;
-    border: 3px solid rgba(211, 211, 211, 0.493);
-}
-input::placeholder{
-    color: #8a8a8a;
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
-}
-input:focus{
-    border: 3px solid grey;
-}
-@media only screen and (max-width: 600px) {
-    
 }
