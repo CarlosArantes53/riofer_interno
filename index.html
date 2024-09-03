@@ -12,9 +12,13 @@
 </head>
 <body>
     
-    <main>
+    <header>
         <img  src="images-index/logo.png">
-    </main>
+    </header>
+
+    <div class="text-login">
+        <h1 class="title-login">Riofer Conecta</h1>
+    </div>
     
     
 <section class="Login-conect">
@@ -29,9 +33,9 @@
             <img width="25" height="25" src="https://img.icons8.com/ios-glyphs/25/ffffff/lock--v1.png" alt="lock--v1"/>
             <input type="password" placeholder="senha"required>
         </div>
-        <button type="submit">Entrar</button>
+        <button type="submit" id="logout"><a onclick="window.location.href='/paginas/home/home.html'">entrar</a></button>
 
-        <a href="#">Exqueci e senha</a>
+        <p><a href="#">Exqueci a Senha</a></p>
     </div>
 </section>
 
@@ -42,16 +46,29 @@
 </footer>
 
 
+<script>
+      auth.onAuthStateChanged(user => {
+            if (!user) {
+                redirectToLogin();
+            }
+        });
+
+        document.getElementById('logout').addEventListener('click', function() {
+            auth.signOut().then(() => {
+                redirectToLogin();
+            });
+        });
+</script>
 
 
 
+<script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore-compat.js"></script>
 
-    <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-auth-compat.js"></script>
-
-    <script src="../js/auth/firebase_config.js"></script> 
-    <script src="../js/auth/auth.js"></script>
-    <script src="../js/redirect/redirect.js"></script>
+<script src="../js/auth/firebase_config.js"></script>
+<script src="../js/auth/auth.js"></script>
+<script src="../js/redirect/redirect.js"></script>
 </body>
 </html>
 
