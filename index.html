@@ -4,75 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <a  href="https://icons8.com/icon/23265/user"></a><a href="https://icons8.com"></a>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Archivo+Black&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
-    <title>Riofer =] </title>
+    <title>Riofer =]</title>
 </head>
 <body>
     
     <header>
-        <img  src="images-index/logo.png">
+        <img src="images-index/logo.png">
+        <div class="text-login">
+            <h1 class="title-login">Riofer Conecta</h1>
+        </div>
     </header>
 
-    <div class="text-login">
-        <h1 class="title-login">Riofer Conecta</h1>
-    </div>
-    
-    
-<section class="Login-conect">
-    <div class="container-father">
-        <div class="campo-user">
-            <label for="user"></label>
-            <img width="25" height="25" src="https://img.icons8.com/ios-filled/25/ffffff/user.png" alt="user"/>
-            <input type="text" placeholder="user" required>
+    <section class="Login-conect">
+        <div class="container-father">
+            <form id="loginForm">
+                <div class="campo-user">
+                    <label for="email"></label>
+                    <img width="25" height="25" src="https://img.icons8.com/ios-filled/25/ffffff/user.png" alt="user"/>
+                    <input id="email" type="text" placeholder="user" required>
+                </div>
+                <div class="campo-senha">
+                    <label for="password"></label>
+                    <img width="25" height="25" src="https://img.icons8.com/ios-glyphs/25/ffffff/lock--v1.png" alt="lock--v1"/>
+                    <input id="password" type="password" placeholder="senha" required>
+                </div>
+                <button type="submit">Entrar</button>
+                <p id="error-message" style="color: red;"></p> <!-- Elemento para mostrar mensagens de erro -->
+                <p><a href="#">Esqueci a Senha</a></p>
+            </form>
         </div>
-        <div class="campo-senha">
-            <label for="password"></label>
-            <img width="25" height="25" src="https://img.icons8.com/ios-glyphs/25/ffffff/lock--v1.png" alt="lock--v1"/>
-            <input type="password" placeholder="senha"required>
-        </div>
-        <button type="submit" id="logout"><a onclick="window.location.href='/paginas/home/home.html'">entrar</a></button>
+    </section>
 
-        <p><a href="#">Exqueci a Senha</a></p>
-    </div>
-</section>
+    <footer>
+        <p class="text-rights">RIOFER © 2024. TODOS OS DIREITOS RESERVADOS.</p>
+    </footer>
 
-
-
-<footer>
-    <p class="text-rights">RIOFER © 2024. TODOS OS DIREITOS RESERVADOS.</p>
-</footer>
-
-
-<script>
-      auth.onAuthStateChanged(user => {
-            if (!user) {
-                redirectToLogin();
-            }
-        });
-
-        document.getElementById('logout').addEventListener('click', function() {
-            auth.signOut().then(() => {
-                redirectToLogin();
-            });
-        });
-</script>
-
-
-
-<script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-auth-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore-compat.js"></script>
-
-<script src="../js/auth/firebase_config.js"></script>
-<script src="../js/auth/auth.js"></script>
-<script src="../js/redirect/redirect.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-auth-compat.js"></script>
+    <script src="../js/auth/firebase_config.js"></script>
+    <script src="../js/auth/auth.js"></script>
 </body>
 </html>
-
-
-
-   
-

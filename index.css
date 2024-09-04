@@ -2,13 +2,11 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    
-    
-    
 }
 
 body {
-    background-color: #003049;
+    background-color: #04051D;
+    backdrop-filter: blur(20px);
     margin: 0;
     height: 100vh;
     display: flex;
@@ -30,7 +28,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 320px;
+    margin-bottom: 300px;
     margin-right: 150px;
 }
 @media screen and (max-width: 770px){
@@ -43,19 +41,20 @@ header {
 }
 header img {
     width: 100%;
-    max-width: 420px;
+    max-width: 500px;
     height: auto;
     cursor: pointer;
 }
 div.text-login{
-    position: relative;
-    right: 550px;
-    top: 100px;
+    position: absolute;
+    right:700px;
+    top: 350px;
+    width: 300px;
 }
 div h1.title-login{
     color: #fff;
-    font-family: 'poppins', sans-serif;
-    text-transform: capitalize;
+    font-family: "Archivo Black", system-ui;
+    text-transform: uppercase;
     font-size: 53px;
 }
 section.Login-conect {
@@ -73,15 +72,18 @@ section.Login-conect {
 }
 
 .container-father {
-    background-color:  #003049;
+    background-color:  #04051D;
+    box-shadow:  10px 0 30px #000000;
     border: rgb(190, 162, 2) solid 5px;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 100px 40px;
-    border-radius: 30px;
+    border-radius: 10px;
     width: 90%;
     max-width: 600px;
+    position: relative;
+    right: 230px;
 }
 
 .container-father input {
@@ -120,11 +122,25 @@ div.campo-user img, div.campo-senha img {
     align-items: center;
     justify-content: center;
 }
-
+.container-father button:focus{
+    cursor: wait;
+}
 .container-father button:hover {
     background-color: #ffd900;
+    animation-name: anima;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count:infinite;
+    animation-direction:alternate;
 }
-
+@keyframes anima{
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.05);
+    }
+}
 .container-father button#logout a {
     color: black;
     text-transform: capitalize;
@@ -134,10 +150,18 @@ div.campo-user img, div.campo-senha img {
 .Login-conect p a {
     margin-top: 10px;
     text-align: center;
-    color: #003cff;
+    letter-spacing: 2px;
+    text-decoration: none;
+    color: rgb(190, 162, 2); /* Cor do texto inicial */
     font-family: 'Poppins', sans-serif;
     display: block;
+    border-bottom: 4px solid transparent; /* Inicialmente transparente */
 }
+
+.Login-conect p a:hover {
+    border-bottom-color: gold; /* A linha inferior fica preta ao hover */
+}
+
 
 footer {
     border-top: rgba(128, 128, 128, 0.418) solid 3px;

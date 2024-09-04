@@ -15,7 +15,7 @@
 }
 body{
     font-family: Arial, Helvetica, sans-serif;
-    background-image: url(Cópia\ de\ RH\ -\ TREINAMENTO.jpg) ;
+    background-color: #04051D;
     background-size: cover;
     background-position: center;
     color: var(--color-white);
@@ -25,8 +25,9 @@ body{
     height: 100vh;
 }
 .content{
-    background-color: var(--color-dark2);
+    background-color: #04051D;
     padding: 2rem;
+    border: gold 4px solid;
     border-radius: 10px;
     min-width: 30%;
     overflow: auto;

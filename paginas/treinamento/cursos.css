@@ -1,21 +1,39 @@
-*{
+* {
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
 }
-ul {
-    text-align: center;
-}
-ul#cursos-list{
-    position: absolute;
-    top: 90px;
-    left: 0%;
+
+
+ul#cursos-list {
     display: flex;
-    gap: 50px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    gap: 50px; /* Espaçamento entre os itens */
+    padding: 0;
+    margin: 0;
+    margin-top: 50px;
+    /* Remove o width e height para permitir que os itens se ajustem automaticamente */
 }
-ul#cursos-list{
-    width: 135px;
-    height: 200px;
-    position: relative;
-    z-index: 3;
+
+li {
+    width: 150px; /* Define a largura dos itens */
+    height: 215px; /* Define a altura dos itens */
+    background-color: #04051D; /* Apenas para visualização */
+    font-family: 'poppins', sans-serif;
+    text-align: center;
+    display: flex;
+    color: white;
+    flex-direction: column;
+    justify-content: center; /* Centraliza o conteúdo dentro do item */
+    align-items: center; /* Centraliza o conteúdo verticalmente dentro do item */
+}
+li a{
+    color: white;
+    text-decoration: none;
+    border-top: white solid 2px;
 }
