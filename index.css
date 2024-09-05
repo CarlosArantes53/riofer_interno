@@ -45,7 +45,7 @@ header img {
     height: auto;
     cursor: pointer;
 }
-div.text-login{
+.text-login{
     position: absolute;
     right:700px;
     top: 350px;
@@ -84,6 +84,12 @@ section.Login-conect {
     max-width: 600px;
     position: relative;
     right: 230px;
+}
+@media screen and (max-width:800px){
+    .container-father{
+        position: relative;
+        right: 0;
+    }
 }
 
 .container-father input {

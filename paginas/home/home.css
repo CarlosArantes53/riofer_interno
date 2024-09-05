@@ -16,7 +16,7 @@ body{
     overflow: hidden;    
 }   
 header{
-    width: 55%;
+    width: 60%;
     height: 70px;
     display: flex;
     align-items: center;
@@ -45,6 +45,14 @@ ul li a{
     font-size: 20px;
     transition: 0.4s ;
     cursor: pointer;
+}
+@media screen and (max-width:700px) {
+    ul li a{
+        display: none;
+    }
+    .text-home{
+        display: block;
+    }
 }
 ul li ul.dropdown li{
     display: block;
