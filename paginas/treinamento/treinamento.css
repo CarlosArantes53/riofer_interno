@@ -19,7 +19,6 @@ ul#cursos-list {
     margin-top: 50px;
     /* Remove o width e height para permitir que os itens se ajustem automaticamente */
 }
-
 li {
     width: 150px; /* Define a largura dos itens */
     height: 215px; /* Define a altura dos itens */

@@ -3,20 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Archivo+Black&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./cadastroTreinamento.css">
     <title>Cadastrar Novo Curso</title>
 </head>
 <body>
     <h2>Cadastrar Novo Curso</h2>
     <form id="curso-form">
-        <label for="titulo">Título:</label>
-        <input type="text" id="titulo" name="titulo" required><br><br>
+        <label for="titulo"></label>
+        <input type="text" placeholder="Titulo:" id="titulo" name="titulo" required><br><br>
 
-        <label for="descricao">Descrição:</label>
-        <textarea id="descricao" name="descricao" required></textarea><br><br>
+        <label for="descricao"></label>
+        <textarea id="descricao" placeholder="descrição:" name="descricao" required></textarea><br>
 
-        <label for="categoria">Categoria:</label>
-        <input type="text" id="categoria" name="categoria" required><br><br>
+        <p>Categoria:</p>
+        <div class="box-select">
+            <select id="nivel">
+                <option>💼Comercial</option>
+                <option>🛒Compras</option>
+                <option>📊Controladoria</option>
+                <option>📦Estoque</option>
+                <option>🚚Expedição</option>
+                <option>💰Financeiro</option>
+                <option>🌐Geral</option>
+                <option>📅PCP (Planejamento e controle de produção):</option>
+                <option>🏭Produção</option>
+                <option>🧑‍💼RH (Recursos humanos)</option>
+                <option>💻Tecnologia</option>
+            </select>
+        </div><br>
 
         <label for="linkUtil">Link Útil:</label>
         <input type="url" id="linkUtil" name="linkUtil" required><br><br>

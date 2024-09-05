@@ -30,6 +30,6 @@ auth.onAuthStateChanged((user) => {
     if (user) {
         listarCursos();
     } else {
-        window.location.href = 'cursos.html';
+        window.location.href = 'index.html';
     }
 });

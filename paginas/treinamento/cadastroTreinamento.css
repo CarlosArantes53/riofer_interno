@@ -2,4 +2,103 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+    border: none;
+    outline: none;
+}
+body{
+    background-color: #04051D;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+}
+form{
+    background-color: #04051D;
+    border: gold 3px solid;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 17px;
+}
+form#curso-form button{
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+    background-color: gold;
+    font-size: 17px;
+}
+form#curso-form button:focus{
+    cursor: wait;
+}
+form#curso-form button:hover {
+    background-color: #ffd900;
+    animation-name: anima;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count:infinite;
+    animation-direction:alternate;
+}
+@keyframes anima{
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.05);
+    }
+}
+label,p,h2{
+    color: #fff;
+}
+form input{
+    background-color: rgb(29, 29, 29);
+    border: solid 2px rgb(48, 48, 48);
+    color: #fff;
+    padding: 10px;
+    width: 100%;
+    border-radius: 10px;
+    border: solid 2px rgb(48, 48, 48);
+    outline: none;
+}
+form textarea{
+    padding: 8px 5px;
+    outline: none;
+    border-radius: 5px;
+    background-color: rgb(29, 29, 29);
+    border: solid 2px rgb(41, 41, 41);
+    color: white;
+    width: 100%;
+    height: 100px;
+    box-sizing: border-box;
+    transition: .3s;
+}
+option{
+    font-size: 20px;
+    background-color: rgb(29, 29, 29);
+    border: solid 2px rgb(48, 48, 48);
+    border-radius: 10px;
+    color: #fff;
+}
+select{
+    background-color: rgb(29, 29, 29);
+    border: solid 2px rgb(48, 48, 48);
+    height: 100px;
+    color: #fff;
+    border-radius: 10px;
+    outline: none;
+}
+#categoria{
+    height: 30px;
+    border-radius: 10px;
+}
+.box-select{
+    display: flex;
+    justify-content: space-between;
+    font-weight:bold;
+    gap: 1rem;
+
+}
+#nivel{
+    width:100%;
+    height: 50px;
+    border-radius: 10px;
 }
