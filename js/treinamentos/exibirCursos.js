@@ -27,6 +27,6 @@ auth.onAuthStateChanged((user) => {
     if (user) {
         listarCursos();
     } else {
-        window.location.href = '../paginas/treinamento/cursos.html';
+        window.location.href = '/cursos.html';
     }
 });
