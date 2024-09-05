@@ -50,7 +50,7 @@ body {
 @keyframes fadeIn {
   0%, 100% {
     opacity: 0;
-    transform: translateY(40px);
+    transform: translateY(50px);
   }
   50% {
     opacity: 1;
