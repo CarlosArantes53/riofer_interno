@@ -47,7 +47,7 @@ aside img {
 }
 .text-login{
     position: absolute;
-    top: 350px;
+    top: 60vh;
 }
 div h1.title-login{
     color: #fff;
@@ -92,6 +92,11 @@ section.Login-conect {
     border: none;
     background-color: #fff;
 }
+/* HTML: <div class="loader"></div> */
+
+  @keyframes l1 {
+      100% {background-size:100%}
+  }
 
 div.campo-user, div.campo-senha {
     width: 100%;
