@@ -3,16 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Archivo+Black&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Mono+One&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="./treinamento.css">
     <title>Cursos internos da riofer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Archivo+Black&family=Poppins:wght@300;400;500;700;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./treinamento.css">
+    <link rel="stylesheet" href="/paginas/loadingpage/carregamento.css">
 </head>
 <body>
-    <h2>Cursos Disponíveis</h2>
-    <ul id="cursos-list"> 
-    </ul>
+    <div id="loading-page" class="loader">
+        <div class="square">R</div>
+        <div class="square">I</div>
+        <div class="square">O</div>
+        <div class="square">F</div>
+        <div class="square">E</div>
+        <div class="square">R</div>
+    </div>
+
+    <div id="main-content" style="display: none;">
+        <h2>Cursos Disponíveis</h2>
+        <ul id="cursos-list"></ul>
+    </div>
 
     <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-auth-compat.js"></script>
@@ -21,5 +32,14 @@
     <script src="/js/auth/firebase_config.js"></script>
     <script src="/js/redirect/redirect.js"></script>
     <script src="/js/treinamentos/exibirTreinamento.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            setTimeout(() => {
+                document.getElementById('loading-page').style.display = 'none';
+                document.getElementById('main-content').style.display = 'block';
+            }, 3000);
+        });
+    </script>
 </body>
 </html>
