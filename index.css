@@ -49,11 +49,15 @@ aside img {
     position: absolute;
     top: 60vh;
 }
+@media  screen and (max-width: 795px){
+    .text-login{
+        top: 220%;
+    }
+}
 div h1.title-login{
     color: #fff;
     font-family: "poppins", system-ui;
     text-transform: uppercase;
-    font-size: 53px;
 }
 section.Login-conect {
     display: flex;

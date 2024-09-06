@@ -46,12 +46,16 @@ ul li a{
     transition: 0.4s ;
     cursor: pointer;
 }
-@media screen and (max-width:700px) {
+@media screen and (max-width:1310px) {
     ul li a{
         display: none;
     }
     .text-home{
         display: block;
+    }
+    header{
+        width: 40%;
+        justify-content: left;
     }
 }
 ul li ul.dropdown li{
@@ -258,12 +262,23 @@ to{
     height: 100%;
     object-fit:cover;
     border-radius: 10px;
+    transition: 0.4s ease;
     filter: brightness(80%);
+}
+.container .thumb .thumb-item img:hover{
+    -moz-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
 }
 .container .thumb .content{
      position: absolute;
      bottom: 10px;
      left: 10px;
+     transition: 0.3s ease;
+     cursor: pointer;
+}
+.container .thumb .content:hover{
+    font-size: 18px;
 }
 .container .arrows{
     display: flex;

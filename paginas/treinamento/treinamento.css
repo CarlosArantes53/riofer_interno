@@ -7,6 +7,10 @@
     
 }
 
+body{
+    overflow: scroll;
+}
+
 
 ul#cursos-list {
     display: flex;
@@ -35,4 +39,8 @@ li a{
     color: white;
     text-decoration: none;
     border-top: white solid 2px;
+}
+h2{
+    color: #fff;
+    font-family: 'poppins', sans-serif;
 }
