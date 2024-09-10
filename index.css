@@ -12,7 +12,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
     overflow: hidden;
 }
 @media screen and (max-width: 770px){
@@ -45,13 +44,14 @@ aside img {
     height: auto;
     cursor: pointer;
 }
-.text-login{
+.text-login {
     position: absolute;
     top: 60vh;
+    
 }
 @media  screen and (max-width: 795px){
     .text-login{
-        top: 220%;
+        top: 78vh;
     }
 }
 div h1.title-login{
@@ -80,7 +80,7 @@ section.Login-conect {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 100px 40px;
+    padding: 70px 40px;
     border-radius: 10px;
     width: 90%;
     max-width: 600px;
@@ -168,6 +168,42 @@ div.campo-user img, div.campo-senha img {
     border-bottom-color: gold; /* A linha inferior fica preta ao hover */
 }
 
+.grad-icons{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 5px;
+    cursor: pointer;
+}
+.icon-facebook,
+.icon-youtube,
+.icon-instagram{
+    padding: 10px;
+}
+.icon-facebook:hover,
+.icon-youtube:hover,
+.icon-instagram:hover{
+    background-color: gold;
+    border-radius: 50%;
+    transition: 0.3s ease;
+}
+
+.button-chamados a{
+    color: #000000;
+    text-decoration: none;
+    font-family: 'poppins', sans-serif;
+    font-weight: 500;
+}
+.button-chamados{
+    background-color: rgb(230, 196, 5);
+    padding: 5px;
+    border-radius: 20px;
+    transition: 0.3s ease;
+    margin-top: 10px;
+}
+.button-chamados:hover{
+    background-color: #ffc400;
+}
 
 footer {
     border-top: rgba(128, 128, 128, 0.418) solid 3px;
