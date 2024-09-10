@@ -44,20 +44,24 @@ aside img {
     height: auto;
     cursor: pointer;
 }
-.text-login {
+.text-login{
     position: absolute;
-    top: 60vh;
-    
+    top: 60%;
+    z-index: 1;
 }
 @media  screen and (max-width: 795px){
     .text-login{
-        top: 78vh;
+        top: 230%;
     }
+}
+@media screen and (max-width: 800px){
+
 }
 div h1.title-login{
     color: #fff;
     font-family: "poppins", system-ui;
     text-transform: uppercase;
+    font-size: max(1px, 6.5vh);
 }
 section.Login-conect {
     display: flex;
