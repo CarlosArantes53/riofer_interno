@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+ 
 }
 
 body {
@@ -35,7 +36,8 @@ aside {
         margin-right: 0;
         margin-bottom: 0px;
         position: relative;
-        top: 60px;
+        top: 35px;
+        min-height: 200px;
     }
 }
 aside img {
@@ -49,19 +51,16 @@ aside img {
     top: 60%;
     z-index: 1;
 }
-@media  screen and (max-width: 795px){
+@media  screen and (max-width: 770px){
     .text-login{
-        top: 230%;
+        top: 340%;
     }
-}
-@media screen and (max-width: 800px){
-
 }
 div h1.title-login{
     color: #fff;
     font-family: "poppins", system-ui;
     text-transform: uppercase;
-    font-size: max(1px, 6.5vh);
+    font-size: max(40px, 3vw);
 }
 section.Login-conect {
     display: flex;
@@ -79,7 +78,6 @@ section.Login-conect {
 
 .container-father {
     background-color:  #04051D;
-    box-shadow:  10px 0 30px #000000;
     border: rgb(190, 162, 2) solid 5px;
     display: flex;
     flex-direction: column;
@@ -89,7 +87,12 @@ section.Login-conect {
     width: 90%;
     max-width: 600px;
     position: relative;
+    transition: transform 0.3s ease, background-color 0.3s, color 0.3s;
 } 
+.container-father:hover{
+    box-shadow: 0 0 20px #fffb00a2;
+    transform: translateY(-10px);
+}
 
 .container-father input {
     padding: 10px;
@@ -102,9 +105,6 @@ section.Login-conect {
 }
 /* HTML: <div class="loader"></div> */
 
-  @keyframes l1 {
-      100% {background-size:100%}
-  }
 
 div.campo-user, div.campo-senha {
     width: 100%;
@@ -119,13 +119,14 @@ div.campo-user img, div.campo-senha img {
 
 .container-father button {
     margin-top: 15px;
-    background-color: #c0a300;
+    border: #ffd900 solid 5px;
+    color: #fff;
+    background-color: transparent;
     border-radius: 10px;
     font-size: 18px;
     padding: 10px 20px;
     outline: 0;
-    border: 0;
-    transition: 0.3s ease;
+    transition: transform 0.3s, background-color 0.3s, color 0.3s;
     width: 100%;
     cursor: pointer;
     display: flex;
@@ -136,21 +137,17 @@ div.campo-user img, div.campo-senha img {
     cursor: wait;
 }
 .container-father button:hover {
+    transform: translateY(-10px);
     background-color: #ffd900;
+    color: #000000;
+    box-shadow: 0 0 15px rgb(251, 255, 0);
     animation-name: anima;
     animation-duration: 0.5s;
     animation-timing-function: ease-in-out;
     animation-iteration-count:infinite;
     animation-direction:alternate;
 }
-@keyframes anima{
-    0%{
-        transform: scale(1);
-    }
-    100%{
-        transform: scale(1.05);
-    }
-}
+
 .container-father button#logout a {
     color: black;
     text-transform: capitalize;
@@ -207,6 +204,7 @@ div.campo-user img, div.campo-senha img {
 }
 .button-chamados:hover{
     background-color: #ffc400;
+    opacity: 0.5;
 }
 
 footer {
