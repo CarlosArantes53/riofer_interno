@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Curso</title>
+    <link rel="stylesheet" href="curso.css"> 
+</head>
+<body>
+    <div id="curso-container">
+        <h2 id="curso-titulo"></h2>
+        <p id="curso-descricao"></p>
+        <img id="curso-imagem" src="" alt="">
+
+        <h3>Módulos do Curso</h3>
+        <ul id="modulos-list"></ul>
+
+        <h3>Adicionar Módulo</h3>
+        <input type="text" id="novo-modulo-titulo" placeholder="Título do Módulo">
+        <textarea id="novo-modulo-descricao" placeholder="Descrição do Módulo"></textarea>
+        <button id="adicionar-modulo-btn">Adicionar Módulo</button>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore-compat.js"></script>
+    <script src="/js/auth/firebase_config.js"></script>
+    <script src="/js/redirect/redirect.js"></script>
+    <script src="/js/treinamentos/cadastroModulo.js"></script> 
+</body>
+</html>

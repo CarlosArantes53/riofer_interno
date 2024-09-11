@@ -13,7 +13,7 @@ function listarCursos() {
 
             listItem.innerHTML = `
                 <img src="${imagemURL}" alt="${curso.Titulo}" class="curso-imagem" onerror="this.onerror=null;this.src='Erro.jpg';">
-                <h3>${curso.Titulo}</h3>
+                <a href="modulosDetalhe.html?id=${doc.id}"><h3>${curso.Titulo}</h3></a> 
                 <p>${curso.Descricao}</p>
                 <p>Categoria: ${curso.Categoria}</p>
             `;
