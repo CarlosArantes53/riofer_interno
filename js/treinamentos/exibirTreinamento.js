@@ -9,12 +9,13 @@ function listarCursos() {
         querySnapshot.forEach((doc) => {
             const curso = doc.data();
             const listItem = document.createElement("li");
+            const imagemURL = curso.ImagemURL || "Erro.jpg";
+
             listItem.innerHTML = `
+                <img src="${imagemURL}" alt="${curso.Titulo}" class="curso-imagem" onerror="this.onerror=null;this.src='Erro.jpg';">
                 <h3>${curso.Titulo}</h3>
                 <p>${curso.Descricao}</p>
                 <p>Categoria: ${curso.Categoria}</p>
-                <a href="${curso.LinkUtil}" target="_blank">Acessar Link Útil</a><br>
-                <a href="${curso.LinkFormulario}" target="_blank">Acessar Formulário</a>
             `;
             cursosList.appendChild(listItem);
         });

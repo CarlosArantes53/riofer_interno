@@ -21,26 +21,23 @@
 
         <p>Categoria:</p>
         <div class="box-select">
-            <select id="nivel">
-                <option>💼Comercial</option>
-                <option>🛒Compras</option>
-                <option>📊Controladoria</option>
-                <option>📦Estoque</option>
-                <option>🚚Expedição</option>
-                <option>💰Financeiro</option>
-                <option>🌐Geral</option>
-                <option>📅PCP (Planejamento e controle de produção):</option>
-                <option>🏭Produção</option>
-                <option>🧑‍💼RH (Recursos humanos)</option>
-                <option>💻Tecnologia</option>
+            <select id="categoria">
+                <option>💼 - Comercial</option>
+                <option>🛒 - Compras</option>
+                <option>📊 - Controladoria</option>
+                <option>📦 - Estoque</option>
+                <option>🚚 - Expedição</option>
+                <option>💰 - Financeiro</option>
+                <option>🌐 - Geral</option>
+                <option>📅 - PCP</option>
+                <option>🏭 - Produção</option>
+                <option>🧑‍💼 - RH</option>
+                <option>💻 -  Tecnologia</option>
             </select>
         </div><br>
-
-        <label for="linkUtil">Link Útil:</label>
-        <input type="url" id="linkUtil" name="linkUtil" required><br><br>
-
-        <label for="linkFormulario">Link do Formulário:</label>
-        <input type="url" id="linkFormulario" name="linkFormulario" required><br><br>
+        
+        <label for="imagem">Imagem do Curso:</label><br>
+        <input type="file" id="imagem" accept="image/*" required><br><br>
 
         <button type="submit">Cadastrar Curso</button>
     </form>
@@ -48,6 +45,8 @@
     <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-auth-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-storage-compat.js"></script>
+    
     
     <script src="/js/auth/firebase_config.js"></script>
     <script src="/js/redirect/redirect.js"></script>    
