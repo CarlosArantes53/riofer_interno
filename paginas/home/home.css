@@ -13,7 +13,7 @@ body{
     background: #ffffff;
     color: white;
     font-size: 12px;
-    overflow: hidden;    
+    overflow: scroll;    
 }   
 header .container-header{
     background-color: #04051D;
@@ -24,7 +24,6 @@ header .container-header{
     justify-content: space-evenly;
     margin: auto;
     align-items: center;
-    position: absolute;
     z-index: 2;
     padding: 40px;
 }
@@ -363,9 +362,15 @@ div.sidebar a:hover{
     height: auto;
 }
 
+main .blogs-container{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
 .blog-content {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     margin-bottom: 20px;
 }
 

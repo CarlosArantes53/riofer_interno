@@ -1,10 +1,14 @@
-body {
+body{
+  width: 100vw;
+  height: 100vh;
+}
+
+div#loading-page.loader{
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  margin: 0;
-  background-color: #04051D;
+  
 }
 
 .loader {
