@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <title>Cadastrar Novo Blog</title>
+</head>
+<body>
+    <h2>Cadastrar Novo Blog</h2>
+    <form id="Blog-form">
+        <label for="titulo">Título:</label>
+        <input type="text" placeholder="Título:" id="titulo" name="titulo" required><br><br>
+
+        <label for="descricao">Descrição:</label>
+        <textarea id="descricao" placeholder="Descrição:" name="descricao" required></textarea><br>
+
+        <p>Categoria:</p>
+        <div class="box-select">
+            <select id="categoria" required>
+                <option value="Publicação">📝 Publicação</option>
+                <option value="Evento">🎉 Evento</option>
+            </select>
+        </div><br>
+
+        <label for="dataInicio" class="dataEvento">Data de Início do Evento:</label><br>
+        <input type="date" id="dataInicio" class="dataEvento"><br><br>
+
+        <label for="dataFim" class="dataEvento">Data de Fim do Evento:</label><br>
+        <input type="date" id="dataFim" class="dataEvento"><br><br>
+
+        <label for="imagem">Imagem do Blog (Opcional):</label><br>
+        <input type="file" id="imagem" accept="image/*"><br><br>
+
+        <button type="submit">Cadastrar Blog</button>
+    </form>
+
+    <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-storage-compat.js"></script>
+    
+    <script src="/js/auth/firebase_config.js"></script>
+    <script src="/js/blog/cadastroBlog.js"></script>  
+    <script>
+        const categoriaSelect = document.getElementById('categoria');
+        const dataFields = document.querySelectorAll('.dataEvento');
+
+        categoriaSelect.addEventListener('change', function() {
+            if (categoriaSelect.value === 'Evento') {
+                dataFields.forEach(field => field.style.display = 'block');
+            } else {
+                dataFields.forEach(field => field.style.display = 'none');
+            }
+        });
+
+        dataFields.forEach(field => field.style.display = 'none');
+    </script>
+</body>
+</html>
