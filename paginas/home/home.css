@@ -21,19 +21,24 @@ header .container-header{
     max-width: 100%;
     height: 180px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     margin: auto;
     align-items: center;
     position: absolute;
     z-index: 2;
     padding: 40px;
 }
-.container-header .nav-home,
-.container-header .nav-home a {
-    color: #ffffff;
+
+.container-header .nav-home  {
     font-size: 20px;
     display: flex;
-    margin-right: 50px;
+    justify-content: space-evenly;
+    width: 50%;
+}
+.container-header .nav-home a {
+    display: flex;
+    color: #fff;
+    
 }
 .icon-menu img{
     display: none;
@@ -49,6 +54,20 @@ header .container-header{
         display: block;
     }
 }
+
+div.icon-exit *{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: red;
+    font-size: 20px;
+}
+div.icon-exit img{
+    width: 40px;
+    margin-right: 10px;
+}
+
 div.sidebar{ 
     position: fixed;
     top: 0;
