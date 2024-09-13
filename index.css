@@ -2,17 +2,17 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
- 
 }
 
 body {
     background-color: #04051D;
     backdrop-filter: blur(20px);
     margin: 0;
+    width: 100vw;
     height: 100vh;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     overflow: hidden;
 }
 @media screen and (max-width: 770px){
@@ -22,8 +22,6 @@ body {
 }
 
 aside {
-    width: 100%;
-    max-width: 600px;
     height: auto;
     display: flex;
     justify-content: center;
@@ -41,9 +39,7 @@ aside {
     }
 }
 aside img {
-    width: 100%;
-    max-width: 500px;
-    height: auto;
+    width: max(150px, 18vw);
     cursor: pointer;
 }
 .text-login{
@@ -103,8 +99,6 @@ section.Login-conect {
     border: none;
     background-color: #fff;
 }
-/* HTML: <div class="loader"></div> */
-
 
 div.campo-user, div.campo-senha {
     width: 100%;
