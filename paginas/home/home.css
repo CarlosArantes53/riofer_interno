@@ -6,19 +6,19 @@
     box-sizing: border-box;
     text-decoration: none;
     font-family: "Poppins", sans-serif;
-    
-
 }
+
 body{
     background: #ffffff;
     color: white;
     font-size: 12px;
+    width: 100vw;
+    height: 100vh;
     overflow: scroll;    
 }   
 header .container-header{
     background-color: #04051D;
     width: 100%;
-    max-width: 100%;
     height: 180px;
     display: flex;
     justify-content: space-evenly;
@@ -34,11 +34,13 @@ header .container-header{
     color: white;
 }
 .container-header .nav-home {
-    color: #ffffff;
     font-size: 20px;
     display: flex;
     justify-content: space-evenly;
     width: 50%;
+}
+.container-header .nav-home a:hover{
+    filter: brightness(50%);
 }
 .container-header .nav-home a {
     display: flex;
@@ -60,13 +62,16 @@ header .container-header{
     }
 }
 
-div.icon-exit *{
+div.icon-exit a{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     color: red;
     font-size: 20px;
+}
+div.icon-exit a:hover{
+    filter: brightness(50%);
 }
 div.icon-exit img{
     width: 40px;
@@ -96,277 +101,6 @@ div.sidebar a{
 div.sidebar a:hover{
     filter: brightness(20%);
 }
-.container{
-    height: 100vh;
-    width: 100vw;
-    display: none;
-}
-.container .list .list-item{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-}
-.container .list .list-item img{
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    filter: brightness(50%);
-}
-.container .list .list-item .content{
-    position: absolute;
-    top: 20%;
-    right: 10%;
-    padding-right: 10%;
-    width: 80%;
-    color: white;
-    text-shadow: 0 5px 10px #0004;
-}
-.container .list .list-item .title{
-    font-size: 5em;
-    font-weight: 700;
-    line-height: 1.3em;
-}
-.container .list .list-item .description{
-    font-size: 1.5em;
-}
-.container .list .list-item .buttons{
-    display: grid;
-    grid-template-columns: repeat(2, 130px);
-    grid-template-rows: 40px;
-    margin-top: 20px;
-    gap: 5px;
-    animation: botaoanima 0.5s 0.4s linear 1 forwards;
-}
-@keyframes botaoanima{
-    from{
-        transform: translateY(50px);
-        filter: blur(20px);
-        opacity: 0;
-    }
-}
-.container .list .list-item .buttons button{
-    border: none;
-    background-color: white;
-    letter-spacing: 3px;
-    font-weight: 500;
-    cursor: pointer;
-    text-transform: uppercase;
-    animation: botaoanima 0.5s 0.4s linear 1 forwards;
-}
-.container .list .list-item .buttons button:nth-child(2){
-    background-color: transparent;
-    border: solid white 1px;
-    color: white;
-}
-.container .list .list-item .buttons button:hover{
-    background-color: transparent;
-    border: solid 1px white;
-    color: white;
-    transition: 0.7s;
-}
-.container .list .list-item .buttons button:nth-child(2):hover{
-    background-color: white;
-    color: black;
-}
-.container .thumb{
-    position: absolute;
-    bottom: 50px;
-    left: 47%;
-    display: flex;
-    gap: 20px;
-    transform: translateY(120px);
-    filter: blur(20px);
-    opacity: 0;
-    animation: thumbanima 0.5s 1s linear 1 forwards;
-}
-@keyframes thumbanima{
-    to{
-        transform: translateY(0);
-        filter: blur(0);
-        opacity: 1;
-    }
-}
-.container .thumb .thumb-item{
-    width: 135px;
-    height: 200px;
-    display: none;
-    position: relative;
-    z-index: 3;
-}
-.container .thumb .thumb-item img{
-    width: 100%;
-    height: 100%;
-    object-fit:cover;
-    border-radius: 10px;
-    transition: 0.4s ease;
-    filter: brightness(80%);
-}
-.container .thumb .thumb-item img:hover{
-    -moz-transform: scale(1.2);
-  -webkit-transform: scale(1.2);
-  transform: scale(1.2);
-}
-.container .thumb .content{
-     position: absolute;
-     bottom: 10px;
-     left: 10px;
-     transition: 0.3s ease;
-     cursor: pointer;
-}
-.container .thumb .content:hover{
-    font-size: 18px;
-}
-.container .arrows{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    position: absolute;
-    bottom: 145px;
-    left: 350px;
-    width: 300px;
-}
-.container .arrows button{
-    border-radius: 10px;
-    border: none;
-    padding: 19px 25px;
-    background-color: #eee4;
-    color: white;
-    cursor: pointer;
-    font-weight: 700;
-    font-size: 1.5em;
-    transform: translateY(50px);
-    filter: blur(20px);
-    opacity: 0;
-    animation: effectNextThumb 0.5s 0.8s linear 1 forwards;
-}
-
-@keyframes effectNextThumb{
-    to{
-        transform: translateY(0);
-        filter: blur(0);
-        opacity: 1;
-    }
-}
-
-
-.container .arrows button:hover{
-    background-color: white;
-    color: black;
-    transition: 0.7s;
-}
-
-/*movimento ultima thumb*/
-
-.container.next .thumb .thumb-item:nth-last-child(1){
-    animation: effectLastThumb 0.5s linear 1 forwards;
-}
-
-@keyframes effectLastThumb{
-    from{
-        width: 0;
-        opacity: 0;
-    }
-}
-
-/*textos principais*/
-
-.container .list .list-item:nth-last-child(1) .content .title,
-.container .list .list-item:nth-last-child(1) .content .description,
-.container .list .list-item:nth-last-child(1) .content .buttons{
-    transform: translateY(50px);
-    filter: blur(20px);
-    opacity: 0;
-    animation: showContent 0.5s 1s linear 1 forwards;
-}
-
-@keyframes showContent{
-    to{
-        transform: translateY(0);
-        filter: blur(0);
-        opacity: 1;
-    }
-}
-
-.container .list .list-item:nth-last-child(1) .content .title{
-    animation-delay: 1.2s;
-}
-.container .list .list-item:nth-last-child(1) .content .description{
-    animation-delay: 1.6s;
-}
-.container .list .list-item:nth-last-child(1) .content .buttons{
-    animation-delay: 2s;
-}
-
-.container.next .list .list-item:nth-last-child(1) img{
-    width: 150px;
-    height: 220px;
-    position: absolute;
-    bottom: 50px;
-    left: 50px;
-    border-radius: 30px;
-    animation: showMainImage 0.5s linear forwards;
-}
-@keyframes showMainImage{
-    to{
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border-radius: 0;
-    }
-}
-/*imagem principal Back*/
-
-.container.back .list .list-item:nth-child(1) img{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    animation: hideMainImage 0.5s linear 1 forwards;
-    z-index: 2;
-}
-
-@keyframes hideMainImage{
-    to{
-        width: 135px;
-        height: 200px;
-        border-radius: 10px;
-        left: 47%;
-        bottom: 50px; 
-    }
-}
-@media screen and (max-width: 800px){
-    .container .list .list-item .content{
-        top: 10%;
-    }
-    .container .thumb{
-        bottom: 60px;
-    left: 25px;
-    gap: 5px;
-        
-    }
-    .container .list .list-item .description{
-        font-size: 1.0em;
-    }
-    header a{
-        margin-right: 15px;
-    }
-}
-@media screen and (max-width: 1150px){
-    .container .thumb .thumb-item{
-        width: 85px;
-        height: 160px;
-    }
-    .container .arrows{
-        bottom: 250px;
-        left: 155px;
-    }
-}
-   
-.logo {
-    width: 10vw;
-    height: auto;
-}
-
 main .blogs-container{
     display: flex;
     align-items: center;

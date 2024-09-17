@@ -10,7 +10,6 @@
 body{
     background-color: #fff;
 }
-
 header .header-training{
     width: 100%;
     height: 150px;
@@ -19,18 +18,65 @@ header .header-training{
     justify-content: space-around;
     background-color: #04051D;
 }
+@media screen and (max-width: 710px){
+    header .header-training{
+        flex-direction: column;
+    }
+}
+
+nav.nav-header{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: 0.2s ease-in-out;
+}
+nav.nav-header:hover{
+    filter: brightness(50%);
+}
 nav.nav-header a{
     color: #fff;
     font-size: 23px;
     font-family: 'poppins', sans-serif;
 }
-
 .logo-riofer img{
-    width: 10vw;
+    width: 160px;
+}
+@media screen and (max-width: 710px){
+    .logo-riofer img{
+        width: 100px;
+    }
+    nav.nav-header a{
+        font-size: 20px;
+    }
+    nav.nav-header{
+        gap: 0;
+    }
 }
 
 div#main-content{
     padding: 40px;
+}
+
+.icon-back a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 23px;
+    color: rgb(255, 255, 255);
+    font-family: 'poppins', sans-serif;
+    transition: 0.2s ease-in-out;
+}
+.icon-back a:hover{
+    filter: brightness(50%);
+}
+@media screen and (max-width: 710px){
+    .icon-back a{
+        flex-direction: row;
+        gap: 10px;
+    }
+    p.text-rights{
+        text-align: center;
+    }
 }
 
 ul#cursos-list {
@@ -75,5 +121,22 @@ h2{
     color: #fff;
     font-family: 'poppins', sans-serif;
     text-align: center;
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+}
+
+p.text-rights{
+    border-top: solid 2px #9696969c;
+    width: 100%;
+    background-color: gold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'poppins', sans-serif;
 }
 
