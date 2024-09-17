@@ -47,6 +47,28 @@ function hideSidebar(){
     const sidebar = document.querySelector('.sidebar')
     sidebar.style.display = 'none'
 }
+function showUserInfo(userId) {
+    const database = firebase.database();
+    database.ref('usuarios/' + userId).once('value')
+        .then((snapshot) => {
+            const userData = snapshot.val();
+            if (userData) {
+                document.getElementById('user-info').textContent = 'Olá, ' + userData.nome + '!';
+            }
+        })
+        .catch((error) => {
+            console.error('Erro ao obter dados do usuário:', error);
+        });
+}
+
+function showSidebar(){
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display = 'flex'
+}
+function hideSidebar(){
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display = 'none'
+}
 
 auth.onAuthStateChanged((user) => {
     if (user) {
