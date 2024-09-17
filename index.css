@@ -34,12 +34,12 @@ aside {
         margin-right: 0;
         margin-bottom: 0px;
         position: relative;
-        top: 35px;
+        top: 40px;
         min-height: 200px;
     }
 }
 aside img {
-    width: max(150px, 18vw);
+    width: max(150px, 16.1vw);
     cursor: pointer;
 }
 .text-login{
@@ -64,7 +64,7 @@ section.Login-conect {
     align-items: center;
     width: 100%;
     max-width: 300px;
-    margin-bottom: 20px;
+    margin-top: 20px;
 }
 @media screen and (max-width: 770px){
     section.Login-conect{
