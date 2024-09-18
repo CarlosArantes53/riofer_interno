@@ -3,36 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="blogCadastro.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <title>Cadastrar Novo Blog</title>
 </head>
 <body>
-    <h2>Cadastrar Novo Blog</h2>
+    
+    <header>
+        <div class="icon-exit">
+            <a id="logout" href="../home/home.html">
+                <img src="../home/images-home/icon-exit.7bfce337.svg"  alt="icon-exit">
+                Voltar
+            </a>
+        </div>
+    </header>
+
+
     <form id="Blog-form">
-        <label for="titulo">Título:</label>
-        <input type="text" placeholder="Título:" id="titulo" name="titulo" required><br><br>
+        <h2>Cadastrar Novo Blog</h2>
+        
+        <br>
+        <p class="text-mandatory"><span>*</span> Obrigatório</p>
+        <br>
 
-        <label for="descricao">Descrição:</label>
-        <textarea id="descricao" placeholder="Descrição:" name="descricao" required></textarea><br>
+        <label for="titulo">Título  <span>*</span></label>
+        <input type="text"  id="titulo" name="titulo" required>
 
-        <p>Categoria:</p>
+        <label for="descricao">Descrição   <span>*</span></label>
+        <textarea id="descricao" name="descricao" required></textarea>
+
+        <p>Categoria</p>
         <div class="box-select">
             <select id="categoria" required>
                 <option value="Publicação">📝 Publicação</option>
                 <option value="Evento">🎉 Evento</option>
             </select>
-        </div><br>
+        </div>
 
-        <label for="dataInicio" class="dataEvento">Data de Início do Evento:</label><br>
-        <input type="date" id="dataInicio" class="dataEvento"><br><br>
+        <label for="dataInicio" class="dataEvento">Data de Início do Evento:</label>
+        <input type="date" id="dataInicio" class="dataEvento">
 
-        <label for="dataFim" class="dataEvento">Data de Fim do Evento:</label><br>
-        <input type="date" id="dataFim" class="dataEvento"><br><br>
+        <label for="dataFim" class="dataEvento">Data de Fim do Evento:</label>
+        <input type="date" id="dataFim" class="dataEvento">
 
-        <label for="imagem">Imagem do Blog (Opcional):</label><br>
-        <input type="file" id="imagem" accept="image/*"><br><br>
+        <label for="imagem">Imagem</label>
+        <input type="file" id="imagem" accept="image/*">
 
         <button type="submit">Cadastrar Blog</button>
     </form>

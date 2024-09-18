@@ -20,19 +20,38 @@ body{
     background-size: cover;
     background-position: center;
     color: var(--color-white);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 64vh;
+    height: 100vh;
     width: 100vw;
+}
+header{
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    justify-content: flex-end;
+}
+a#logout{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    font-size: 22px;
+    transition: 0.3s ease;
+}
+a#logout:hover{
+    filter: brightness(70%);
+}
+a#logout img{
+    width: max(2.7vw, 50px);
+    transform: rotate(179.5deg);
 }
 .content{
     background-color: #04051D;
     padding: 40px 30px;
     border: gold 4px solid;
-    margin-top: 210px;
     border-radius: 10px;
-    min-width: 29%;
+    max-width: 600px;
+    margin: auto;
     box-shadow: 10px 10px 10px rgb(0, 0, 0);
 }
 h1{
@@ -43,7 +62,7 @@ h1{
 .content form{
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    
     
 }
 .span-required{
@@ -67,6 +86,11 @@ h1{
 textarea#descricao{
     border-radius: 5px;
     padding: 0px;
+    outline: none;
+    border: solid 2px var(--color-dark1);
+}
+textarea#descricao:focus{
+    border-color: gold;
 }
 option{
     font-size: 20px;

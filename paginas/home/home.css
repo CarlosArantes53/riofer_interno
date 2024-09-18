@@ -39,20 +39,22 @@ header .container-header{
     justify-content: space-evenly;
     width: 50%;
 }
-.container-header .nav-home a:hover{
-    filter: brightness(50%);
-}
 .container-header .nav-home a {
     display: flex;
     color: #fff;
-    
 }
+.container-header .nav-home a:hover{
+    filter: brightness(70%);
+    transition: 0.3s ease;
+}
+
 .icon-menu img{
     display: none;
 }
 @media screen and  (max-width: 900px){
     header .container-header{
         justify-content: space-between;
+        padding: 14px;
     }
     .hideOnMobile{
         display: none !important; 
@@ -71,11 +73,13 @@ div.icon-exit a{
     font-size: 20px;
 }
 div.icon-exit a:hover{
-    filter: brightness(50%);
+    filter: brightness(70%);
+    transition: 0.3s ease;
 }
 div.icon-exit img{
     width: 40px;
     margin-right: 10px;
+    transform: rotate(179.5deg);
 }
 
 div.sidebar{ 
