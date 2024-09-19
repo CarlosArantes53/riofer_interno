@@ -10,7 +10,7 @@
 
 body{
     background: #ffffff;
-    color: white;
+    color: #04051D;
     font-size: 12px;
     width: 100vw;
     height: 100vh;
@@ -26,12 +26,6 @@ header .container-header{
     align-items: center;
     z-index: 2;
     padding: 40px;
-}
-.user-info {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    color: white;
 }
 .container-header .nav-home {
     font-size: 20px;
@@ -111,6 +105,11 @@ main .blogs-container{
     gap: 20px;
 }
 
+.user-info {
+    top: 10px;
+    right: 20px;
+    color: #04051D;
+}
 .blog-content {
     display: flex;
     align-items: center;

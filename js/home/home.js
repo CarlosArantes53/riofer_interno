@@ -47,19 +47,6 @@ function hideSidebar(){
     const sidebar = document.querySelector('.sidebar')
     sidebar.style.display = 'none'
 }
-function showUserInfo(userId) {
-    const database = firebase.database();
-    database.ref('usuarios/' + userId).once('value')
-        .then((snapshot) => {
-            const userData = snapshot.val();
-            if (userData) {
-                document.getElementById('user-info').textContent = 'Olá, ' + userData.nome + '!';
-            }
-        })
-        .catch((error) => {
-            console.error('Erro ao obter dados do usuário:', error);
-        });
-}
 
 function showSidebar(){
     const sidebar = document.querySelector('.sidebar')
@@ -73,12 +60,26 @@ document.addEventListener('DOMContentLoaded', function () {
     setTimeout(() => {
         document.getElementById('loading-page').style.display = 'none';
         document.getElementById('main-content').style.display = 'block';
-    }, 3000); 
+    }, 3000);
+    exibirBlogs();
 });
-auth.onAuthStateChanged((user) => {
+
+auth.onAuthStateChanged(user => {
     if (user) {
-        exibirBlogs();
+        const userId = user.uid;
+        database.ref('usuarios/' + userId).once('value')
+            .then(snapshot => {
+                const userData = snapshot.val();
+                if (userData && userData.nome) {
+                    document.getElementById('user-info').textContent = `Olá, ${userData.nome}!`;
+                } else {
+                    document.getElementById('user-info').textContent = `Olá!`;
+                }
+            })
+            .catch(error => {
+                console.error('Erro ao buscar dados do usuário:', error);
+            });
     } else {
-        window.location.href = 'index.html'; 
+        redirectToLogin();
     }
 });

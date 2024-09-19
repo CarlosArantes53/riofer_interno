@@ -76,10 +76,10 @@
                 </a>
             </div>
         </div>
-        <div id="user-info" class="user-info"> </div> 
       </header>
 
       <main>
+        <div id="user-info" class="user-info"></div> 
         <h1>Eventos</h1>
         <div id="eventos-container" class="blogs-container"></div>
     
@@ -92,6 +92,7 @@
     <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-auth-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-database-compat.js"></script>
 
     <script src="/js/auth/firebase_config.js"></script>
     <script src="/js/auth/auth.js"></script>
@@ -99,12 +100,6 @@
     <script src="/js/home/home.js"></script> 
     
     <script>
-        auth.onAuthStateChanged(user => {
-            if (!user) {
-                redirectToLogin();
-            }
-        });
-
         document.getElementById('logout').addEventListener('click', function() {
             auth.signOut().then(() => {
                 redirectToLogin();
