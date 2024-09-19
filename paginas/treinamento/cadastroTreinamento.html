@@ -11,13 +11,26 @@
     <title>Cadastrar Novo Curso</title>
 </head>
 <body>
-    <h2>Cadastrar Novo Curso</h2>
-    <form id="curso-form">
-        <label for="titulo"></label>
-        <input type="text" placeholder="Titulo:" id="titulo" name="titulo" required>
 
+    <header>
+        <div class="icon-exit">
+            <a id="logout" href="/paginas/treinamento/treinamento.html">
+                <img src="../home/images-home/icon-exit.7bfce337.svg"  alt="icon-exit">
+                Voltar
+            </a>
+        </div>
+    </header>
+
+
+    <form id="curso-form">
+        <h2>Cadastrar Novo Curso</h2>
+        <p>Titulo:</p>
+        <label for="titulo"></label>
+        <input type="text" id="titulo" name="titulo" required>
+
+        <p>Descrição:</p>
         <label for="descricao"></label>
-        <textarea id="descricao" placeholder="descrição:" name="descricao" required></textarea>
+        <textarea id="descricao" name="descricao" required></textarea>
 
         <p>Categoria:</p>
         <div class="box-select">
@@ -34,7 +47,7 @@
                 <option>🧑‍💼 - RH</option>
                 <option>💻 -  Tecnologia</option>
             </select>
-        </div><br>
+        </div>
         
         <label for="imagem">Imagem do Curso:</label>
         <input type="file" id="imagem" accept="image/*" required>

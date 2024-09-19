@@ -14,8 +14,10 @@ body{
     font-size: 12px;
     width: 100vw;
     height: 100vh;
-    overflow: scroll;  
+    overflow: auto;
 }   
+
+
 header .container-header{
     background-color: #04051D;
     width: 100%;
