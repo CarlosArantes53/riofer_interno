@@ -69,7 +69,12 @@ function hideSidebar(){
     const sidebar = document.querySelector('.sidebar')
     sidebar.style.display = 'none'
 }
-
+document.addEventListener('DOMContentLoaded', function () {
+    setTimeout(() => {
+        document.getElementById('loading-page').style.display = 'none';
+        document.getElementById('main-content').style.display = 'block';
+    }, 3000); 
+});
 auth.onAuthStateChanged((user) => {
     if (user) {
         exibirBlogs();
