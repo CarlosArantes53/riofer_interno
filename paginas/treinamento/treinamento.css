@@ -4,11 +4,13 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    
 }
 
 body{
     background-color: #fff;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
 }
 header .header-training{
     width: 100%;
@@ -54,7 +56,10 @@ nav.nav-header a{
 }
 
 div#main-content{
-    padding: 40px;
+    padding: 100px 40px;
+    padding-bottom: 70px;
+    width: 100vw;
+    height: 100%;
 }
 
 .icon-back a{
@@ -80,14 +85,12 @@ div#main-content{
 }
 
 ul#cursos-list {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10rem;
-    padding: 0;
-    margin: 0;
-    margin-top: 50px;
+    display: grid ;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    flex-grow: 1;
+    gap: 5rem;
+    max-width: 900px;
+    margin: auto;
 }
 li {
     width: 200px;
@@ -96,13 +99,9 @@ li {
     background-color: #04051D;
     font-family: 'poppins', sans-serif;
     text-align: center;
-    display: flex;
     color: white;
     font-size: 14px;
-    padding-bottom: 2%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    margin: auto;
 }
 
 img.curso-imagem {

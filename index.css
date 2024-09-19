@@ -35,11 +35,11 @@ aside {
         margin-bottom: 0px;
         position: relative;
         top: 40px;
-        min-height: 200px;
+        min-height: 185px;
     }
 }
 aside img {
-    width: max(150px, 16.1vw);
+    width: max(180px, 15vw);
     cursor: pointer;
 }
 .text-login{
@@ -56,7 +56,7 @@ div h1.title-login{
     color: #fff;
     font-family: "poppins", system-ui;
     text-transform: uppercase;
-    font-size: max(40px, 3vw);
+    font-size: max(40px, 2.8vw);
 }
 section.Login-conect {
     display: flex;
@@ -68,7 +68,7 @@ section.Login-conect {
 }
 @media screen and (max-width: 770px){
     section.Login-conect{
-        margin-bottom: 320px;
+        margin-bottom: 220px;
     }
 }
 
