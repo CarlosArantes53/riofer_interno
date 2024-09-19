@@ -12,8 +12,9 @@ function listarCursos() {
             const imagemURL = curso.ImagemURL || "Erro.jpg";
 
             listItem.innerHTML = `
-                <img src="${imagemURL}" alt="${curso.Titulo}" class="curso-imagem" onerror="this.onerror=null;this.src='Erro.jpg';">
-                <a href="modulosDetalhe.html?id=${doc.id}"></a> 
+                <a href="modulosDetalhe.html?id=${doc.id}"> 
+                    <img src="${imagemURL}" alt="${curso.Titulo}" class="curso-imagem" onerror="this.onerror=null;this.src='Erro.jpg';">
+                </a>
                 <h3>${curso.Titulo}</h3>
                 <p>${curso.Descricao}</p>
                 <p>Categoria: ${curso.Categoria}</p>
