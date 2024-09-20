@@ -18,12 +18,11 @@ function listarCursos() {
                 <h3>${curso.Titulo}</h3>
                 <p>${curso.Descricao}</p>
                 <p>Categoria: ${curso.Categoria}</p>
-
-             <a href="#">
-                Acessar curso
-                <img src="/paginas/home/images-home/play_circle_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="play-circle">
-            </a>
-
+                
+                <a href="#">
+                    Acessar curso
+                    <img src="/paginas/home/images-home/play_circle_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="play-circle">
+                </a>
             `;
             cursosList.appendChild(listItem);
         });
@@ -31,6 +30,7 @@ function listarCursos() {
         console.error("Erro ao listar cursos: ", error);
     });
 }
+
 
 auth.onAuthStateChanged((user) => {
     if (user) {

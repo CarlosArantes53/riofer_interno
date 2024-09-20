@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
 
 *{
     margin: 0;
@@ -14,7 +15,7 @@ body{
     font-size: 12px;
     width: 100vw;
     height: 100vh;
-    overflow: auto;
+    overflow: scroll;
 }   
 
 
@@ -101,47 +102,85 @@ div.sidebar a{
 div.sidebar a:hover{
     filter: brightness(20%);
 }
+section {
+    width: 100%;
+    padding: 5rem;
+    margin-top: 2rem;
+    background-color: gold;
+}
+div.texts-welcome{
+    width: 40%;
+    font-size: 18px;
+    margin-left: 5rem;
+
+    
+}
+.user-info{
+    color: #000;
+    font-size: 70px;
+    font-weight: 500;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 main .blogs-container{
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
-.user-info {
-    top: 10px;
-    right: 20px;
-    color: #04051D;
-}
+/*.user-info {
+    font-size: 23px;
+    font-family: 'poppins', sans-serif;
+    text-transform: uppercase;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}*/
 .blog-content {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
+    background-color: #04051D;
+    border-radius: 10px;
+    color: #fff;
+    text-align: center;
+    margin: auto;
+    width: 250px;
+    height: 350px;
+    
 }
 
-.blog-imagem {
-    width: 200px;
-    height: 150px;
+img.blog-imagem {
     object-fit: cover;
-    margin-right: 15px;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
 }
 
-.blog-texto {
-    display: flex;
-    flex-direction: column;
-    color: black;
+main h1{
+    
+    text-align: left;
+    width: 65%;
+    margin: 30px auto;
 }
 
-.blog-container {
-    margin-bottom: 30px;
+main{
+    padding: 0 0 80px 0;
 }
 
 main .blogs-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.blog-container {
-    width: 30%;
-    margin-bottom: 20px;
+    display: grid ;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+    gap: 4.8rem;
+    max-width: 1200px;
+    margin: auto;   
 }
