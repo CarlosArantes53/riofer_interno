@@ -10,6 +10,7 @@ div#loading-page.loader{
   height: 100%;
   width: 100%;
   background-color: #04051D;
+  z-index: 1;
   
 }
 

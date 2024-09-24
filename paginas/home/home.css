@@ -104,21 +104,31 @@ div.sidebar a:hover{
 }
 section {
     width: 100%;
-    padding: 5rem;
-    margin-top: 2rem;
     background-color: gold;
 }
 div.texts-welcome{
     width: 40%;
-    font-size: 18px;
-    margin-left: 5rem;
-
-    
+    font-size: 2vw;
+    margin-left: 17.5vw;    
+}
+@media (max-width:450px){
+    .texts-welcome{
+        display: none;
+    }
 }
 .user-info{
     color: #000;
-    font-size: 70px;
+    font-size: 5vw;
     font-weight: 500;
+    margin-left: 17.5vw;    
+}
+@media (max-width:450px){
+        .user-info{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 0vw;
+    }
 }
 
 
