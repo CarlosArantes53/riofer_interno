@@ -2,40 +2,93 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+    text-transform: capitalize;
+    list-style: none;
 }
 body{
+    background-color: #04051D;
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
 }
-img#curso-imagem{
-    width: 10vw;
+header div.icon-exit{
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    justify-content: flex-end;
 }
-div#curso-container{
+a#logout{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    width: 50%;
-    padding: 40px;
+    align-items: center;
+    color: #ff0000;
+    text-decoration: none;
+    font-size: 22px;
+    transition: 0.3s ease;
+}
+a#logout:hover{
+    filter: brightness(70%);
+}
+a#logout img{
+    width: max(2.7vw, 50px);
+    transform: rotate(179.5deg);
+}
+article#Training-Box{
+    display: flex;
+    flex-direction: column;
     background-color: #04051D;
     color: #fff;
-}
-div#curso-container input{
+    border: solid 4px gold;
+    border-radius: 10px;
+    margin-left: 5%;
+    width: max(300px,25vw);
+} 
+img#curso-imagem{
     width: 100%;
-    border: none;
-    outline: none;
-    border-radius: 5px;
-    padding: 8px;
+    height: 100%;
+    border-radius: 4px 4px 0 0;
 }
-div#curso-container textarea{
-    width: 100%;
-    border: none;
-    outline: none;
-    border-radius: 5px;
+div.texts-modules{
+    padding:  7px 20px; 
+    display: flex;
+    flex-direction: column;
 }
-div#curso-container button{
-    background-color: gold;
+div.texts-modules h3{
+    margin-top: 5px;
+}
+div.inputs-texts{
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px 20px;
+}
+div.inputs-texts input{
     padding: 10px;
-    border: none;
     border-radius: 5px;
-    margin-top: 10px;
+    border: none;
+    outline: none;
+}
+div.inputs-texts input:focus{
+    border: gold solid 3px;
+}
+div.inputs-texts textarea{
+    border-radius: 5px;
+    padding: 2px;
+    border: none;
+    outline: none;
+}
+div.inputs-texts textarea:focus{
+    border: gold 3px solid;
+}
+div.inputs-texts button{
+    background-color: gold;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    margin-top: 12px;
+    padding: 10px;
+    transition: 0.3s ease;
+}
+div.inputs-texts button:hover{
+    filter: brightness(70%);
 }

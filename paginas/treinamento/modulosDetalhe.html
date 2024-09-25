@@ -7,21 +7,35 @@
     <link rel="stylesheet" href="modulos.css"> 
 </head>
 <body>
-    <div id="curso-container">
-        <h2 id="curso-titulo"></h2>
-        <p id="curso-descricao"></p>
-        <img id="curso-imagem" src="" alt="">
 
+    <header>
+        <div class="icon-exit">
+            <a id="logout" href="/paginas/treinamento/treinamento.html">
+                <img src="../home/images-home/icon-exit.7bfce337.svg"  alt="icon-exit">
+                Voltar
+            </a>
+        </div>
+    </header>
+    <article id="Training-Box">
+        <header class=" image-curso">
+            <h2 id="curso-titulo"></h2> 
+            <p id="curso-descricao"></p>
+        <img id="curso-imagem" src=""alt="">
+    </header>
+    <div class="texts-modules"> 
         <h3>Módulos do Curso</h3>
-        <ul id="modulos-list"></ul>
-
         <h3>Adicionar Módulo</h3>
+        <ul id="modulos-list"></ul>
+    </div>
+    
+    <div class="inputs-texts">
         <p>Título do Módulo:</p>
         <input type="text" id="novo-modulo-titulo">
         <p>Descrição do Módulo:</p>
         <textarea id="novo-modulo-descricao"></textarea>
         <button id="adicionar-modulo-btn">Adicionar Módulo</button>
     </div>
+    </article>
 
     <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-auth-compat.js"></script>
