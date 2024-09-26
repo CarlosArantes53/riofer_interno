@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function () {
     setTimeout(() => {
         document.getElementById('loading-page').style.display = 'none';
         document.getElementById('main-content').style.display = 'block';
-    }, 3000);
+    }, 9000);
     exibirBlogs();
 });
 

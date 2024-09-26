@@ -23,24 +23,21 @@
     <section class="cadastro-conect">
         <div class="container-father">
             <h1>Cadastro</h1>
-            
             <!-- Formulário para cadastro de setor -->
-            <form id="cadastroSetorForm">
                 <h3>Cadastrar Setor</h3>
                 <div class="campo-setor">
                     <label for="nomeSetor">Nome do Setor:</label>
                     <input type="text" id="nomeSetor" name="nomeSetor" required>
-                </div>
-                <button type="button" id="btnCadastrarSetor">Cadastrar Setor</button>
-                <p id="setor-error-message" style="color: red;"></p> 
-            </form>
-
+        
+            
             <!-- Lista suspensa para selecionar usuários -->
             <label for="selectUsuario">Selecionar usuário:</label>
             <select id="selectUsuario">
                 <option value="">Novo Cadastro</option>
             </select>
-
+            <button type="button" id="btnCadastrarSetor">Cadastrar Setor</button>
+            <p id="setor-error-message" style="color: red;"></p> 
+        </div>
             <form id="cadastroForm">
                 <div class="campo-nome">
                     <label for="nome">Nome:</label>

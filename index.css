@@ -127,11 +127,7 @@ div.campo-user img, div.campo-senha img {
     align-items: center;
     justify-content: center;
 }
-.container-father button:focus{
-    cursor: wait;
-}
 .container-father button:hover {
-    transform: translateY(-10px);
     background-color: #ffd900;
     color: #000000;
     box-shadow: 0 0 15px rgb(251, 255, 0);
@@ -146,6 +142,26 @@ div.campo-user img, div.campo-senha img {
     color: black;
     text-transform: capitalize;
     font-family: 'Poppins', sans-serif;
+}
+#spinner {
+    width: 35px; /* Tamanho do spinner */
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: 
+      radial-gradient(farthest-side, #ffa516 94%, #0000) top/8px 8px no-repeat,
+      conic-gradient(#0000 30%, #ffa516);
+    -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 8px), #000 0);
+    animation: l13 1s infinite linear;
+    margin: 10px auto; /* Centraliza o spinner */
+    display: none; /* Oculta o spinner inicialmente */
+}
+
+.hidden {
+    display: none; /* Classe para ocultar o elemento */
+}
+
+@keyframes l13 { 
+    100% { transform: rotate(1turn); }
 }
 
 .Login-conect p a {

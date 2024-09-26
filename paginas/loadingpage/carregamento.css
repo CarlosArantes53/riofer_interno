@@ -1,4 +1,4 @@
-body{
+body.body-loading-page {
   width: 100vw;
   height: 100vh;
 }
@@ -10,8 +10,11 @@ div#loading-page.loader{
   height: 100%;
   width: 100%;
   background-color: #04051D;
-  z-index: 1;
-  
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  overflow: hidden;
 }
 
 .loader {
@@ -32,6 +35,7 @@ div#loading-page.loader{
   color: #04051D;
   opacity: 0;
   animation: fadeIn 3s infinite;
+
 }
 
 

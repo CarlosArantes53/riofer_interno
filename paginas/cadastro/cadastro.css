@@ -16,6 +16,56 @@ header{
     display: flex;
     justify-content: flex-end;
 }
+div.campo-setor{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+div.campo-setor input{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+div.campo-setor select{
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+div.campo-setor option{
+    padding: 10px;
+    font-size: 20px;
+}
+div.campo-setor button{
+    background-color: gold;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px;
+    margin-top: 10px;
+    transition: ease 0.3s;
+}
+div.campo-setor button:hover{
+    filter: brightness(70%);
+}
+div.campo-tipo{
+    display: flex;
+    flex-direction: column;
+}
+div.campo-tipo select{
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+div.campo-tipo option{
+    padding: 10px;
+    font-size: 20px;
+}
 a#logout{
     display: flex;
     flex-direction: column;
@@ -70,7 +120,6 @@ div.container-father{
     padding-bottom: 50px;
     max-width: 600px;
     background-color: #04051D;
-    color: white;
 }
 div.container-father p#error-message{
     text-align: center;
@@ -78,5 +127,13 @@ div.container-father p#error-message{
     width: 100%;
 }
 .container-father h1{
-    font-size: 30px;
+    font-size: 23px;
+    font-family: 'poppins',sans-serif;
+    text-transform: capitalize;
+    font-weight: 800;
+}
+.container-father h3{
+    font-family: 'poppins',sans-serif;
+    text-transform: capitalize;
+    font-weight: 400;
 }

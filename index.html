@@ -14,8 +14,6 @@
     
     <aside>
         <img src="images-index/logo.png">
-        </header>
-
         <div class="text-login">
             <h1 class="title-login">
                 <span>F</span>
@@ -43,26 +41,23 @@
                     <img width="25" height="25" src="https://img.icons8.com/ios-glyphs/25/ffffff/lock--v1.png" alt="lock--v1"/>
                     <input id="password" type="password" placeholder="senha" required>
                 </div>
-                <button type="submit">Entrar</button>
+                <button class="botaologin" type="submit">Entrar</button>
+                <div id="spinner" class="hidden loader"></div> <!-- Spinner aqui -->
 
-                <div class="loader"></div>
-
-               
                 <p id="error-message" style="color: red;"></p> <!-- Elemento para mostrar mensagens de erro -->
-                <p><a href="#">Esqueci a Senha</a>
+                <p><a href="#">Esqueci a Senha</a></p>
             </form>
             <nav>
                 <div class="grad-icons">
                     <div class="icon-facebook">
-                    <a href="https://www.facebook.com/rioferindustrial/" target="_blank"><img width="35" height="35" src="https://img.icons8.com/ios-filled/35/ffffff/facebook-new.png" alt="facebook-new"/></a>
-                </div>
-                
-                <div class="icon-youtube">
-                    <a href="https://www.youtube.com/@rioferindustrial5110" target="_blank"><img width="35" height="35" src="https://img.icons8.com/ios-filled/35/ffffff/youtube-play.png" alt="youtube-play"/></a>
-                </div>
-                <div class="icon-instagram">
-                    <a href="https://www.instagram.com/rioferindustrial/" target="_blank"><img width="35" height="35" src="https://img.icons8.com/ios-filled/35/ffffff/instagram-new--v1.png" alt="instagram-new--v1"/></a>
-                </div>
+                        <a href="https://www.facebook.com/rioferindustrial/" target="_blank"><img width="35" height="35" src="https://img.icons8.com/ios-filled/35/ffffff/facebook-new.png" alt="facebook-new"/></a>
+                    </div>
+                    <div class="icon-youtube">
+                        <a href="https://www.youtube.com/@rioferindustrial5110" target="_blank"><img width="35" height="35" src="https://img.icons8.com/ios-filled/35/ffffff/youtube-play.png" alt="youtube-play"/></a>
+                    </div>
+                    <div class="icon-instagram">
+                        <a href="https://www.instagram.com/rioferindustrial/" target="_blank"><img width="35" height="35" src="https://img.icons8.com/ios-filled/35/ffffff/instagram-new--v1.png" alt="instagram-new--v1"/></a>
+                    </div>
                 </div>
             </nav>
 
@@ -72,7 +67,22 @@
         </div>
     </section>
 
-   
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita o envio do formulário
+
+            const spinner = document.getElementById('spinner');
+            spinner.classList.remove('hidden');
+            spinner.style.display = 'block'; // Exibe o spinner
+
+            setTimeout(() => {
+                spinner.classList.add('hidden');
+                spinner.style.display = 'none'; // Esconde o spinner
+                alert('Login bem-sucedido!'); // Exemplo de ação após o login
+            }, 5000); // Tempo simulado de 3 segundos
+
+        });
+    </script>
 
     <footer>
         <p class="text-rights">RIOFER © 2024. TODOS OS DIREITOS RESERVADOS.</p>
