@@ -2,17 +2,41 @@ const db = firebase.firestore();
 const storage = firebase.storage();
 const treinamentosRef = db.collection("Treinamentos");
 
-document.getElementById('curso-form').addEventListener('submit', function(e) {
+const setorSelect = document.getElementById('setor');
+const form = document.getElementById('curso-form');
+
+function carregarSetores() {
+    const database = firebase.database();
+    const setoresRef = database.ref('setores');
+
+    setoresRef.once('value', (snapshot) => {
+        const setores = snapshot.val();
+        if (setores) {
+            setorSelect.innerHTML = '';
+            Object.keys(setores).forEach(setorId => {
+                const option = document.createElement('option');
+                option.value = setorId;
+                option.textContent = setores[setorId].nome;
+                setorSelect.appendChild(option);
+            });
+        } else {
+            console.error("Nenhum setor encontrado.");
+        }
+    }).catch((error) => {
+        console.error("Erro ao carregar setores: ", error);
+    });
+}
+
+form.addEventListener('submit', function(e) {
     e.preventDefault();
 
     const titulo = document.getElementById('titulo').value;
     const descricao = document.getElementById('descricao').value;
-    const categoria = document.getElementById('categoria').value;
+    const setorId = setorSelect.value;
     const imagemFile = document.getElementById('imagem').files[0];
 
     if (imagemFile) {
         const storageRef = storage.ref('imagensCursos/' + new Date().getTime() + '_' + imagemFile.name);
-
         const uploadTask = storageRef.put(imagemFile);
 
         uploadTask.on('state_changed', 
@@ -29,11 +53,11 @@ document.getElementById('curso-form').addEventListener('submit', function(e) {
                     treinamentosRef.add({
                         Titulo: titulo,
                         Descricao: descricao,
-                        Categoria: categoria,
+                        SetorId: setorId,
                         ImagemURL: downloadURL
                     }).then(() => {
                         alert('Curso cadastrado com sucesso!');
-                        document.getElementById('curso-form').reset();
+                        form.reset();
                     }).catch((error) => {
                         console.error("Erro ao cadastrar curso: ", error);
                         alert('Erro ao cadastrar curso, tente novamente.');
@@ -46,9 +70,10 @@ document.getElementById('curso-form').addEventListener('submit', function(e) {
     }
 });
 
+window.onload = carregarSetores;
+
 auth.onAuthStateChanged((user) => {
-    if (user) {
-    } else {
+    if (!user) {
         window.location.href = 'index.html';
     }
 });

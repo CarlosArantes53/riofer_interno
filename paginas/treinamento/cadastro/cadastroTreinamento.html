@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Archivo+Black&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./cadastroTreinamento.css">
     <title>Cadastrar Novo Curso</title>
 </head>
@@ -15,12 +14,11 @@
     <header>
         <div class="icon-exit">
             <a id="logout" href="/paginas/treinamento/treinamento.html">
-                <img src="../home/images-home/icon-exit.7bfce337.svg"  alt="icon-exit">
+                <img src="../home/images-home/icon-exit.7bfce337.svg" alt="icon-exit">
                 Voltar
             </a>
         </div>
     </header>
-
 
     <form id="curso-form">
         <h2>Cadastrar Novo Curso</h2>
@@ -32,23 +30,12 @@
         <label for="descricao"></label>
         <textarea id="descricao" name="descricao" required></textarea>
 
-        <p>Categoria:</p>
+        <p>Setor:</p>
         <div class="box-select">
-            <select id="categoria">
-                <option>💼 - Comercial</option>
-                <option>🛒 - Compras</option>
-                <option>📊 - Controladoria</option>
-                <option>📦 - Estoque</option>
-                <option>🚚 - Expedição</option>
-                <option>💰 - Financeiro</option>
-                <option>🌐 - Geral</option>
-                <option>📅 - PCP</option>
-                <option>🏭 - Produção</option>
-                <option>🧑‍💼 - RH</option>
-                <option>💻 -  Tecnologia</option>
+            <select id="setor" required>
             </select>
         </div>
-        
+
         <label for="imagem">Imagem do Curso:</label>
         <input type="file" id="imagem" accept="image/*" required>
 
@@ -57,12 +44,12 @@
 
     <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-database-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-storage-compat.js"></script>
     
     
     <script src="/js/auth/firebase_config.js"></script>
-    <script src="/js/redirect/redirect.js"></script>    
     <script src="/js/treinamentos/cadastroTreinamento.js"></script>
 </body>
 </html>
