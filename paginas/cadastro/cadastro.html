@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Archivo+Black&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="cadastro.css">
     <title>Cadastro - Riofer</title>
+</head>
 <body>
 
     <header>
         <div class="icon-exit">
             <a id="logout" href="../home/home.html">
-                <img src="../home/images-home/icon-exit.7bfce337.svg"  alt="icon-exit">
+                <img src="../home/images-home/icon-exit.7bfce337.svg" alt="icon-exit">
                 Voltar
             </a>
         </div>
@@ -23,6 +23,12 @@
     <section class="cadastro-conect">
         <div class="container-father">
             <h1>Cadastro</h1>
+            <!-- Lista suspensa para selecionar usuários -->
+            <label for="selectUsuario">Selecionar usuário:</label>
+            <select id="selectUsuario">
+                <option value="">Novo Cadastro</option>
+            </select>
+
             <form id="cadastroForm">
                 <div class="campo-nome">
                     <label for="nome">Nome:</label>
@@ -44,8 +50,10 @@
                     <label for="senha">Senha:</label>
                     <input type="password" id="senha" name="senha" required>
                 </div>
-                
-                <button type="submit">Cadastrar</button>
+
+                <!-- Botões de ação -->
+                <button type="submit" id="btnCadastrar">Cadastrar</button>
+                <button type="button" id="btnSalvarEdicao" style="display: none;">Salvar Edição</button>
                 <p id="error-message" style="color: red;"></p> 
             </form>
         </div>
