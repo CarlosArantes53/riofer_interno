@@ -23,6 +23,18 @@
     <section class="cadastro-conect">
         <div class="container-father">
             <h1>Cadastro</h1>
+            
+            <!-- Formulário para cadastro de setor -->
+            <form id="cadastroSetorForm">
+                <h3>Cadastrar Setor</h3>
+                <div class="campo-setor">
+                    <label for="nomeSetor">Nome do Setor:</label>
+                    <input type="text" id="nomeSetor" name="nomeSetor" required>
+                </div>
+                <button type="button" id="btnCadastrarSetor">Cadastrar Setor</button>
+                <p id="setor-error-message" style="color: red;"></p> 
+            </form>
+
             <!-- Lista suspensa para selecionar usuários -->
             <label for="selectUsuario">Selecionar usuário:</label>
             <select id="selectUsuario">
@@ -49,6 +61,20 @@
                 <div class="campo-senha">
                     <label for="senha">Senha:</label>
                     <input type="password" id="senha" name="senha" required>
+                </div>
+                <div class="campo-tipo">
+                    <label for="tipoUsuario">Tipo de Usuário:</label>
+                    <select id="tipoUsuario" name="tipoUsuario" required>
+                        <option value="Administrador">Administrador</option>
+                        <option value="Gerente">Gerente</option>
+                        <option value="Colaborador">Colaborador</option>
+                    </select>
+                </div>
+                <div class="campo-setor">
+                    <label for="setorUsuario">Setor:</label>
+                    <select id="setorUsuario" name="setorUsuario" required>
+                        <!-- Setores preenchidos via JavaScript -->
+                    </select>
                 </div>
 
                 <!-- Botões de ação -->

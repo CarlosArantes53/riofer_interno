@@ -1,4 +1,3 @@
-// Referências aos elementos do DOM
 const form = document.getElementById('cadastroForm');
 const btnCadastrar = document.getElementById('btnCadastrar');
 const btnSalvarEdicao = document.getElementById('btnSalvarEdicao');
@@ -8,11 +7,57 @@ const nomeInput = document.getElementById('nome');
 const cargoInput = document.getElementById('cargo');
 const nascimentoInput = document.getElementById('nascimento');
 const emailInput = document.getElementById('email');
+const tipoUsuarioInput = document.getElementById('tipoUsuario');
+const setorUsuarioInput = document.getElementById('setorUsuario');
+const btnCadastrarSetor = document.getElementById('btnCadastrarSetor');
+const nomeSetorInput = document.getElementById('nomeSetor');
 
-let modoEdicao = false; // Controle para modo de edição
-let usuarioSelecionadoId = null; // ID do usuário que está sendo editado
+let modoEdicao = false;
+let usuarioSelecionadoId = null;
 
-// Carregar usuários ao inicializar
+function carregarSetores() {
+    const database = firebase.database();
+    const setoresRef = database.ref('setores');
+    
+    setoresRef.once('value', (snapshot) => {
+        const setores = snapshot.val();
+        if (setores) {
+            setorUsuarioInput.innerHTML = '';
+            Object.keys(setores).forEach(setorId => {
+                const option = document.createElement('option');
+                option.value = setorId;
+                option.textContent = setores[setorId].nome;
+                setorUsuarioInput.appendChild(option);
+            });
+        }
+    });
+}
+
+btnCadastrarSetor.addEventListener('click', function() {
+    const nomeSetor = nomeSetorInput.value;
+
+    if (nomeSetor) {
+        const database = firebase.database();
+        const setorId = database.ref().child('setores').push().key;
+        const setorData = {
+            nome: nomeSetor
+        };
+
+        database.ref('setores/' + setorId).set(setorData)
+            .then(() => {
+                console.log('Setor cadastrado com sucesso.');
+                carregarSetores(); 
+                nomeSetorInput.value = ''; 
+            })
+            .catch((error) => {
+                console.error('Erro ao cadastrar setor:', error);
+                document.getElementById('setor-error-message').textContent = 'Erro ao cadastrar setor.';
+            });
+    } else {
+        document.getElementById('setor-error-message').textContent = 'Preencha o nome do setor.';
+    }
+});
+
 function carregarUsuarios() {
     const database = firebase.database();
     const usuariosRef = database.ref('usuarios');
@@ -20,7 +65,6 @@ function carregarUsuarios() {
     usuariosRef.once('value', (snapshot) => {
         const usuarios = snapshot.val();
         if (usuarios) {
-            // Preencher o dropdown com os usuários
             Object.keys(usuarios).forEach(userId => {
                 const option = document.createElement('option');
                 option.value = userId;
@@ -31,26 +75,24 @@ function carregarUsuarios() {
     });
 }
 
-// Alternar entre modo de cadastro e edição
 selectUsuario.addEventListener('change', function () {
     const usuarioId = selectUsuario.value;
     
     if (usuarioId === "") {
-        // Modo de cadastro
         modoEdicao = false;
         btnCadastrar.style.display = 'inline-block';
         btnSalvarEdicao.style.display = 'none';
         senhaInput.disabled = false;
+        emailInput.disabled = false;
         form.reset();
     } else {
-        // Modo de edição
         modoEdicao = true;
         usuarioSelecionadoId = usuarioId;
         btnCadastrar.style.display = 'none';
         btnSalvarEdicao.style.display = 'inline-block';
-        senhaInput.disabled = true; // Senha desativada no modo de edição
-
-        // Preencher o formulário com os dados do usuário
+        senhaInput.disabled = true;
+        emailInput.disabled = true; 
+        
         const database = firebase.database();
         const usuarioRef = database.ref('usuarios/' + usuarioId);
         usuarioRef.once('value', (snapshot) => {
@@ -60,12 +102,13 @@ selectUsuario.addEventListener('change', function () {
                 cargoInput.value = usuario.cargo;
                 nascimentoInput.value = usuario.nascimento;
                 emailInput.value = usuario.email;
+                tipoUsuarioInput.value = usuario.tipoUsuario;
+                setorUsuarioInput.value = usuario.setorId;
             }
         });
     }
 });
 
-// Função para cadastrar novo usuário
 form.addEventListener('submit', function (e) {
     e.preventDefault();
 
@@ -74,9 +117,10 @@ form.addEventListener('submit', function (e) {
     const nascimento = nascimentoInput.value;
     const email = emailInput.value;
     const senha = senhaInput.value;
+    const tipoUsuario = tipoUsuarioInput.value;
+    const setorId = setorUsuarioInput.value;
 
     if (!modoEdicao) {
-        // Modo de cadastro
         auth.createUserWithEmailAndPassword(email, senha)
             .then((userCredential) => {
                 const user = userCredential.user;
@@ -86,7 +130,9 @@ form.addEventListener('submit', function (e) {
                     nome: nome,
                     cargo: cargo,
                     nascimento: nascimento,
-                    email: email
+                    email: email,
+                    tipoUsuario: tipoUsuario,
+                    setorId: setorId
                 };
 
                 database.ref('usuarios/' + userId).set(userData)
@@ -106,12 +152,12 @@ form.addEventListener('submit', function (e) {
     }
 });
 
-// Função para salvar edição de usuário
 btnSalvarEdicao.addEventListener('click', function () {
     const nome = nomeInput.value;
     const cargo = cargoInput.value;
     const nascimento = nascimentoInput.value;
-    const email = emailInput.value;
+    const tipoUsuario = tipoUsuarioInput.value;
+    const setorId = setorUsuarioInput.value;
 
     if (modoEdicao && usuarioSelecionadoId) {
         const database = firebase.database();
@@ -119,17 +165,18 @@ btnSalvarEdicao.addEventListener('click', function () {
             nome: nome,
             cargo: cargo,
             nascimento: nascimento,
-            email: email
+            tipoUsuario: tipoUsuario,
+            setorId: setorId
         };
 
-        // Atualizar dados do usuário no Firebase
         database.ref('usuarios/' + usuarioSelecionadoId).update(userData)
             .then(() => {
                 console.log('Dados do usuário atualizados no banco de dados.');
                 alert('Usuário atualizado com sucesso!');
                 form.reset();
-                selectUsuario.value = ""; // Volta para o modo de cadastro
-                senhaInput.disabled = false; // Reativa o campo de senha
+                selectUsuario.value = "";
+                senhaInput.disabled = false;
+                emailInput.disabled = false;
                 btnCadastrar.style.display = 'inline-block';
                 btnSalvarEdicao.style.display = 'none';
             })
@@ -140,10 +187,11 @@ btnSalvarEdicao.addEventListener('click', function () {
     }
 });
 
-// Função para redirecionar após cadastro
 function redirectToLogin() {
     window.location.href = '/index.html';
 }
 
-// Inicializar lista de usuários ao carregar a página
-window.onload = carregarUsuarios;
+window.onload = function() {
+    carregarUsuarios();
+    carregarSetores();
+};
