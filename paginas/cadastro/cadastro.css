@@ -52,6 +52,9 @@ div.campo-setor button{
 div.campo-setor button:hover{
     filter: brightness(70%);
 }
+div.campo-setor label{
+    color: #fff;
+}
 div.campo-tipo{
     display: flex;
     flex-direction: column;
@@ -112,14 +115,15 @@ div.container-father{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: auto;
     border-radius: 10px;
     border: gold 4px solid;
+    color: #fff;
     box-shadow: 0 0 15px #000;
     padding: 20px 40px;
-    padding-bottom: 50px;
+    width: 100%;
     max-width: 600px;
     background-color: #04051D;
+    z-index: 1000;
 }
 div.container-father p#error-message{
     text-align: center;
@@ -131,9 +135,27 @@ div.container-father p#error-message{
     font-family: 'poppins',sans-serif;
     text-transform: capitalize;
     font-weight: 800;
+    color: #fff;
 }
 .container-father h3{
     font-family: 'poppins',sans-serif;
     text-transform: capitalize;
     font-weight: 400;
+    color: #fff;
+}
+div.campo-father{
+    padding: 40px;
+    width: 100%;
+    max-width: 600px;
+    background-color: #04051D;
+    border: solid 4px gold;
+    border-radius: 10px;
+    z-index: 1000;
+}
+@media screen and (max-height:880px) {
+    section.cadastro-conect{
+        display: flex;
+        justify-content: space-around;
+
+    }
 }

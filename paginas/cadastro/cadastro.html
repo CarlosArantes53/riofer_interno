@@ -23,21 +23,7 @@
     <section class="cadastro-conect">
         <div class="container-father">
             <h1>Cadastro</h1>
-            <!-- Formulário para cadastro de setor -->
-                <h3>Cadastrar Setor</h3>
-                <div class="campo-setor">
-                    <label for="nomeSetor">Nome do Setor:</label>
-                    <input type="text" id="nomeSetor" name="nomeSetor" required>
-        
-            
-            <!-- Lista suspensa para selecionar usuários -->
-            <label for="selectUsuario">Selecionar usuário:</label>
-            <select id="selectUsuario">
-                <option value="">Novo Cadastro</option>
-            </select>
-            <button type="button" id="btnCadastrarSetor">Cadastrar Setor</button>
-            <p id="setor-error-message" style="color: red;"></p> 
-        </div>
+            <!-- Formulário para cadastro de setor --> 
             <form id="cadastroForm">
                 <div class="campo-nome">
                     <label for="nome">Nome:</label>
@@ -59,27 +45,42 @@
                     <label for="senha">Senha:</label>
                     <input type="password" id="senha" name="senha" required>
                 </div>
-                <div class="campo-tipo">
-                    <label for="tipoUsuario">Tipo de Usuário:</label>
-                    <select id="tipoUsuario" name="tipoUsuario" required>
-                        <option value="Administrador">Administrador</option>
-                        <option value="Gerente">Gerente</option>
-                        <option value="Colaborador">Colaborador</option>
-                    </select>
-                </div>
-                <div class="campo-setor">
-                    <label for="setorUsuario">Setor:</label>
-                    <select id="setorUsuario" name="setorUsuario" required>
-                        <!-- Setores preenchidos via JavaScript -->
-                    </select>
-                </div>
-
                 <!-- Botões de ação -->
                 <button type="submit" id="btnCadastrar">Cadastrar</button>
                 <button type="button" id="btnSalvarEdicao" style="display: none;">Salvar Edição</button>
                 <p id="error-message" style="color: red;"></p> 
             </form>
         </div>
+    </div>
+
+
+<div class="campo-father">
+    <div class="campo-setor">
+        <label for="nomeSetor">Nome do Setor:</label>
+        <input type="text" id="nomeSetor" name="nomeSetor" required>    
+<!-- Lista suspensa para selecionar usuários -->
+<label for="selectUsuario">Selecionar usuário:</label>
+<select id="selectUsuario">
+    <option value="">Novo Cadastro</option>
+</select>
+
+    <div class="campo-tipo">
+        <label for="tipoUsuario">Tipo de Usuário:</label>
+        <select id="tipoUsuario" name="tipoUsuario" required>
+            <option value="Administrador">Administrador</option>
+            <option value="Gerente">Gerente</option>
+            <option value="Colaborador">Colaborador</option>
+        </select>
+        <div class="campo-setor">
+            <label for="setorUsuario">Setor:</label>
+            <select id="setorUsuario" name="setorUsuario" required>
+                <!-- Setores preenchidos via JavaScript -->
+            </select>
+        </div>
+        <button type="button" id="btnCadastrarSetor">Cadastrar Setor</button>
+        <p id="setor-error-message" style="color: red;"></p>
+    </div>
+    </div>
     </section>
 
     <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-app-compat.js"></script>
