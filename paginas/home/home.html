@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/paginas/home/home.css">
+    <link rel="stylesheet" href="/paginas/loadingpage/carregamento.css">
     <a  href="https://icons8.com/icon/59864/mais"></a><a href="https://icons8.com"></a>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,7 +13,15 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="main-content"> 
+    <div id="loading-page" class="loader">
+        <div class="square">R</div>
+        <div class="square">I</div>
+        <div class="square">O</div>
+        <div class="square">F</div>
+        <div class="square">E</div>
+        <div class="square">R</div>
+    </div>
+    <div id="main-content" style="display: none;"> 
       <header>
         <div class="container-header">
             <div class="logo">
@@ -71,9 +80,9 @@
 
       <section class="section-welcome">
         <div id="user-info" class="user-info"></div>
-        <div class="texts-welcome">
-            <p class="paragraph-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae soluta culpa nisi unde doloremque explicabo maiores ratione similique suscipit tempora deserunt, rerum, possimus expedita totam libero dolorum commodi temporibus eos Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis .!</p>
-        </div>
+            <div class="texts-welcome">
+                <p class="paragraph-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae soluta culpa nisi unde doloremque explicabo maiores ratione similique suscipit tempora deserunt, rerum, possimus expedita totam libero dolorum commodi temporibus eos Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis .!</p>
+            </div>
       </section>
 
       <main>
