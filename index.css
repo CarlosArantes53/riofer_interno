@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: #04051D;
+    background-color: var(--blue-body);
     backdrop-filter: blur(20px);
     margin: 0;
     width: 100vw;
@@ -53,7 +53,7 @@ aside img {
     }
 }
 div h1.title-login{
-    color: #fff;
+    color: var(--white);
     font-family: "poppins", system-ui;
     text-transform: uppercase;
     font-size: max(40px, 2.8vw);
@@ -74,7 +74,7 @@ section.Login-conect {
 
 .container-father {
     background-color:  #04051D;
-    border: rgb(190, 162, 2) solid 5px;
+    border: var(--gold) solid 5px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -86,7 +86,7 @@ section.Login-conect {
     transition: transform 0.3s ease, background-color 0.3s, color 0.3s;
 } 
 .container-father:hover{
-    box-shadow: 0 0 20px #fffb00a2;
+    box-shadow: 0 0 20px var(--gold);
     transform: translateY(-10px);
 }
 
@@ -97,7 +97,7 @@ section.Login-conect {
     margin-top: 10px;
     outline: none;
     border: none;
-    background-color: #fff;
+    background-color: var(--white);
 }
 
 div.campo-user, div.campo-senha {
@@ -113,8 +113,8 @@ div.campo-user img, div.campo-senha img {
 
 .container-father button {
     margin-top: 15px;
-    border: #ffd900 solid 5px;
-    color: #fff;
+    border: var(--gold) solid 5px;
+    color: var(--white);
     background-color: transparent;
     border-radius: 10px;
     font-size: 18px;
@@ -128,9 +128,9 @@ div.campo-user img, div.campo-senha img {
     justify-content: center;
 }
 .container-father button:hover {
-    background-color: #ffd900;
+    background-color: var(--gold);
     color: #000000;
-    box-shadow: 0 0 15px rgb(251, 255, 0);
+    box-shadow: 0 0 15px var(--yellow);
     animation-name: anima;
     animation-duration: 0.5s;
     animation-timing-function: ease-in-out;
@@ -169,14 +169,14 @@ div.campo-user img, div.campo-senha img {
     text-align: center;
     letter-spacing: 2px;
     text-decoration: none;
-    color: rgb(190, 162, 2); /* Cor do texto inicial */
+    color: var(--gold); /* Cor do texto inicial */
     font-family: 'Poppins', sans-serif;
     display: block;
     border-bottom: 4px solid transparent; /* Inicialmente transparente */
 }
 
 .Login-conect p a:hover {
-    border-bottom-color: gold; /* A linha inferior fica preta ao hover */
+    border-bottom-color: var(--gold); /* A linha inferior fica preta ao hover */
 }
 
 .grad-icons{
@@ -194,32 +194,32 @@ div.campo-user img, div.campo-senha img {
 .icon-facebook:hover,
 .icon-youtube:hover,
 .icon-instagram:hover{
-    background-color: gold;
+    background-color: var(--gold);
     border-radius: 50%;
     transition: 0.3s ease;
 }
 
 .button-chamados a{
-    color: #000000;
+    color: var(--black);
     text-decoration: none;
     font-family: 'poppins', sans-serif;
     font-weight: 500;
 }
 .button-chamados{
-    background-color: rgb(230, 196, 5);
+    background-color: var(--gold);
     padding: 5px;
     border-radius: 20px;
     transition: 0.3s ease;
     margin-top: 10px;
 }
 .button-chamados:hover{
-    background-color: #ffc400;
+    background-color: var(--gold);
     opacity: 0.5;
 }
 
 footer {
-    border-top: rgba(128, 128, 128, 0.418) solid 3px;
-    background-color: #ffc400;
+    border-top: var(--gray) solid 2px;
+    background-color: var(--gold);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -234,14 +234,14 @@ footer {
     text-align: center;
     font-family: "Roboto", sans-serif;
     font-weight: 500;
-    color: #000000;
+    color: var(--black);
 }
 
 
 .title-login {
     display: flex;
     gap: 10px;
-    color: #fff;
+    color: var(--white);
     font-family: "poppins", sans-serif;
     text-transform: uppercase;
     font-size: 53px;

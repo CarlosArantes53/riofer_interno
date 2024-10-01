@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalhes do Curso</title>
     <link rel="stylesheet" href="modulos.css"> 
+    <link rel="stylesheet" href="/colors.css">
 </head>
 <body>
 
@@ -16,18 +17,14 @@
             </a>
         </div>
     </header>
+
+    <div class="div-father">
     <article id="Training-Box">
         <header class=" image-curso">
         <img id="curso-imagem" src=""alt="">
         <h2 id="curso-titulo"></h2> 
         <p style="text-transform: uppercase;" id="curso-descricao"></p>
     </header>
-    <div class="texts-modules"> 
-        <h3>Módulos do Curso</h3>
-        <h3>Adicionar Módulo</h3>
-        <ul id="modulos-list"></ul>
-    </div>
-    
     <div class="inputs-texts">
         <p>Título do Módulo:</p>
         <input type="text" id="novo-modulo-titulo">
@@ -36,6 +33,13 @@
         <button id="adicionar-modulo-btn">Adicionar Módulo</button>
     </div>
     </article>
+
+    <div class="texts-modules"> 
+        <h3>Módulos do Curso</h3>
+        <h3>Adicionar Módulo</h3>
+        <ul id="modulos-list"></ul>
+    </div>
+</div>
 
     <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-auth-compat.js"></script>

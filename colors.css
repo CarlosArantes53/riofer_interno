@@ -1,0 +1,119 @@
+:root{
+        /* Tons de Preto */
+        --black: #000000;
+        --black-dark: #0b0b0b;
+        --black-light: #1c1c1c;
+        --black-charcoal: #2e2e2e;
+        --black-ebony: #555555;
+        --black-jet: #343434;
+        --black-onyx: #353839;
+        --black-smoke: #0f0f0f;
+        --black-raisin: #242124;
+        --black-coal: #222222;
+        --black-slate: #2f4f4f;
+        --black-soft: #333333;
+        --black-graphite: #383838;
+        --black-shadow: #1a1a1a;
+        --black-carbon: #1d1f21;
+        --black-obsidian: #0f0f0f;
+        --black-ink: #111111;
+        --black-rubber: #2b2b2b;
+
+        /* Tons de Vermelho */
+        --red: #ff0000;
+        --red-dark: #b30000;
+        --red-light: #ff6666;
+        --red-rose: #ff007f;
+        --red-burgundy: #800020;
+    
+        /* Tons de Azul */
+        --blue: #0000ff;
+        --blue-dark: #000080;
+        --blue-light: #add8e6;
+        --blue-sky: #87ceeb;
+        --blue-navy: #000080;
+        --blue-body: #04051D;
+    
+        /* Tons de Verde */
+        --green: #008000;
+        --green-dark: #006400;
+        --green-light: #90ee90;
+        --green-teal: #008080;
+        --green-lime: #00ff00;
+    
+        /* Tons de Amarelo */
+        --yellow: #ffff00;
+        --yellow-dark: #cccc00;
+        --yellow-light: #ffff99;
+        --yellow-gold: #ffd700;
+        --yellow-mustard: #ffdb58;
+    
+        /* Tons de Roxo */
+        --purple: #800080;
+        --purple-dark: #4b0082;
+        --purple-light: #e6e6fa;
+        --purple-lavender: #b57edc;
+        --purple-magenta: #ff00ff;
+    
+        /* Tons de Laranja */
+        --orange: #ffa500;
+        --orange-dark: #cc8400;
+        --orange-light: #ffd580;
+        --orange-tangerine: #ff6347;
+        --orange-coral: #ff7f50;
+    
+        /* Tons de Rosa */
+        --pink: #ffc0cb;
+        --pink-dark: #ff69b4;
+        --pink-light: #ffb6c1;
+        --pink-hot: #ff1493;
+        --pink-peach: #ffe5b4;
+    
+        /* Tons de Cinza */
+        --gray: #808080;
+        --gray-dark: #505050;
+        --gray-light: #d3d3d3;
+        --gray-silver: #c0c0c0;
+        --gray-slate: #708090;
+    
+        /* Tons de Marrom */
+        --brown: #a52a2a;
+        --brown-dark: #654321;
+        --brown-light: #cd853f;
+        --brown-wood: #deb887;
+        --brown-chocolate: #d2691e;
+    
+        /* Tons de Branco */
+        --white: #ffffff;
+        --off-white: #f8f8ff;
+        --ivory: #fffff0;
+        --charcoal: #36454f;
+    
+        /* Tons de Ciano */
+        --cyan: #00ffff;
+        --cyan-dark: #008b8b;
+        --cyan-light: #e0ffff;
+        --cyan-aqua: #7fdbff;
+        --cyan-turquoise: #40e0d0;
+    
+        /* Tons de Bege */
+        --beige: #f5f5dc;
+        --beige-light: #fff8dc;
+        --beige-dark: #d2b48c;
+        --beige-cream: #f5deb3;
+        --beige-sand: #c2b280;
+    
+        /* Tons de Ouro */
+        --gold: #ffd700;
+        --gold-dark: #b8860b;
+        --gold-light: #ffdf00;
+        --gold-bronze: #cd7f32;
+        --gold-copper: #b87333;
+    
+        /* Tons de Prata */
+        --silver: #c0c0c0;
+        --silver-dark: #a9a9a9;
+        --silver-light: #dcdcdc;
+        --silver-steel: #4682b4;
+        --silver-aluminum: #d2d6de;
+    }

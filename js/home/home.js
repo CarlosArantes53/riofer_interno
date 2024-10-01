@@ -83,3 +83,96 @@ auth.onAuthStateChanged(user => {
         redirectToLogin();
     }
 });
+
+
+const botoesCarrossel = document.querySelectorAll(".botao");
+const imagens = document.querySelectorAll(".imagem")
+const informacoes = document.querySelectorAll(".informacoes")
+
+    //passo 2
+botoesCarrossel.forEach((botao, indice) => {
+    botao.addEventListener("click", () => {
+    //passo 3
+        desativarBotaoSelecionado();
+    //passo 4
+        MarcarBotaoSelecionado(botao);
+    //- passo 5 - ensonder a imagem anteriorente selecionada
+        esconderImagemAtiva();
+        //- passo 6 - fazer aparecer a imagem correspondente ao botao clicado
+       mostrarImagemDefundo(indice);
+       //passo 7 - enconder as informaçoes da imagem anteriormente selecionada
+       esconderinformacoesativas();
+
+       //passo 8
+       mostrarInformacoes(indice);
+    });
+});
+
+function MarcarBotaoSelecionado(botao) {
+    botao.classList.add("selecionado");
+}
+
+function mostrarInformacoes(indice) {
+    informacoes[indice].classList.add("ativa");
+}
+
+function esconderinformacoesativas() {
+    const informacoesAtiva = document.querySelector(".informacoes.ativa");
+    informacoesAtiva.classList.remove("ativa");
+}
+
+function mostrarImagemDefundo(indice) {
+    imagens[indice].classList.add("ativa");
+}
+
+function esconderImagemAtiva() {
+    const imagemAtiva = document.querySelector(".ativa");
+    imagemAtiva.classList.remove("ativa");
+}
+
+function desativarBotaoSelecionado() {
+    const botaoSelecionado = document.querySelector(".selecionado");
+    botaoSelecionado.classList.remove("selecionado");
+}
+
+
+  // Seleciona todas as imagens e botões
+  const imagem = document.querySelectorAll('.imagem');
+  const botoes = document.querySelectorAll('.botao');
+
+  // Índice da imagem atual
+  let indexAtual = 0;
+
+  // Função para trocar a imagem
+  function trocarImagem() {
+    // Remove a classe 'ativa' e 'selecionado' da imagem e botão atuais
+    imagens[indexAtual].classList.remove('ativa');
+    botoes[indexAtual].classList.remove('selecionado');
+
+    // Incrementa o índice da imagem atual, com loop
+    indexAtual = (indexAtual + 1) % imagens.length;
+
+    // Adiciona a classe 'ativa' e 'selecionado' à nova imagem e botão
+    imagens[indexAtual].classList.add('ativa');
+    botoes[indexAtual].classList.add('selecionado');
+  }
+
+  // Define o intervalo para trocar a imagem a cada 3 segundos (3000 ms)
+  setInterval(trocarImagem, 3000);
+
+  // Adiciona um event listener para cada botão, permitindo troca manual
+  botoes.forEach((botao, index) => {
+    botao.addEventListener('click', () => {
+      // Remove a classe 'ativa' e 'selecionado' da imagem e botão atuais
+      imagens[indexAtual].classList.remove('ativa');
+      botoes[indexAtual].classList.remove('selecionado');
+
+      // Atualiza o índice para o botão clicado
+      indexAtual = index;
+
+      // Adiciona a classe 'ativa' e 'selecionado' para a nova imagem e botão
+      imagens[indexAtual].classList.add('ativa');
+      botoes[indexAtual].classList.add('selecionado');
+    });
+  });
+
