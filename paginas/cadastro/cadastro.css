@@ -6,7 +6,7 @@
     
 }
 body{
-    background-color:#04051D;
+    background-color:var(--blue-body);
     width: 100vw;
     height: 100vh;
 }
@@ -39,7 +39,7 @@ div.campo-setor option{
     font-size: 20px;
 }
 div.campo-setor button{
-    background-color: gold;
+    background-color: var(--gold);
     border-radius: 5px;
     border: none;
     outline: none;
@@ -53,7 +53,7 @@ div.campo-setor button:hover{
     filter: brightness(70%);
 }
 div.campo-setor label{
-    color: #fff;
+    color: var(--white);
 }
 div.campo-tipo{
     display: flex;
@@ -73,7 +73,7 @@ a#logout{
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #ff0000;
+    color: var(--red);
     text-decoration: none;
     font-size: 22px;
     transition: 0.3s ease;
@@ -99,8 +99,8 @@ form#cadastroForm button{
     width: 100%;
     margin-top: 20px;
     padding: 10px;
-    color: rgb(0, 0, 0);
-    background-color: gold;
+    color: var(--black);
+    background-color: var(--gold);
     font-size: 18px;
     border-radius: 5px;
     border: none;
@@ -116,13 +116,13 @@ div.container-father{
     align-items: center;
     justify-content: center;
     border-radius: 10px;
-    border: gold 4px solid;
+    border: var(--gold) 4px solid;
     color: #fff;
-    box-shadow: 0 0 15px #000;
+    box-shadow: 0 0 15px var(--black);
     padding: 20px 40px;
     width: 100%;
     max-width: 600px;
-    background-color: #04051D;
+    background-color: var(--blue-body);
     z-index: 1000;
 }
 div.container-father p#error-message{
@@ -135,27 +135,41 @@ div.container-father p#error-message{
     font-family: 'poppins',sans-serif;
     text-transform: capitalize;
     font-weight: 800;
-    color: #fff;
+    color: var(--white);
 }
 .container-father h3{
     font-family: 'poppins',sans-serif;
     text-transform: capitalize;
     font-weight: 400;
-    color: #fff;
+    color: var(--white)
+}
+div.campo-usuario{
+    display: flex;
+    flex-direction: column;
+}
+div.campo-usuario select{
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+div.campo-usuario option{
+    font-size: 20px;
 }
 div.campo-father{
     padding: 40px;
     width: 100%;
+    height: 23%;
     max-width: 600px;
-    background-color: #04051D;
-    border: solid 4px gold;
+    background-color: var(--blue-body);
+    border: solid 4px var(--gold);
     border-radius: 10px;
     z-index: 1000;
 }
-@media screen and (max-height:880px) {
-    section.cadastro-conect{
-        display: flex;
-        justify-content: space-around;
-
-    }
+section.cadastro-conect{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 6rem;
 }

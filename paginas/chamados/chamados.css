@@ -1,13 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-:root{
-    --color-white: #fff;
-    --color-red: #e63636;
-    --color-dark1: #181818;
-    --color-dark2: #1e1e1e;
-    --color-purple1: #9333ff;
-    --color-purple2: indigo;
-}
 *{
     margin: 0;
     padding: 0;
@@ -16,10 +8,10 @@
 }
 body{
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #04051D;
+    background-color: var(--blue-body);
     background-size: cover;
     background-position: center;
-    color: var(--color-white);
+    color: var(--white);
     height: 100vh;
     width: 100vw;
 }
@@ -33,7 +25,7 @@ a#logout{
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #fff;
+    color: var(--white);
     text-decoration: none;
     font-size: 22px;
     transition: 0.3s ease;
@@ -46,13 +38,13 @@ a#logout img{
     transform: rotate(179.5deg);
 }
 .content{
-    background-color: #04051D;
+    background-color: var(--blue-body);
     padding: 40px 30px;
-    border: gold 4px solid;
+    border: var(--gold) 4px solid;
     border-radius: 10px;
     max-width: 600px;
     margin: auto;
-    box-shadow: 10px 10px 10px rgb(0, 0, 0);
+    box-shadow: 10px 10px 10px var(--black);
 }
 h1{
     text-align: center;
@@ -72,7 +64,7 @@ h1{
     padding: 10px;
     outline: none;
     border-radius: 5px;
-    background-color: white;
+    background-color: var(--white);
     border: solid 2px var(--color-dark1);
     color: var(--color-white);
     width: 100%;
@@ -90,16 +82,16 @@ textarea#descricao{
     border: solid 2px var(--color-dark1);
 }
 textarea#descricao:focus{
-    border-color: gold;
+    border-color: var(--gold);
 }
 option{
     font-size: 20px;
-    background-color: #1e1e1e;
+    background-color: var(--black-shadow);
     color: #fff;
 }
 select{
-    background-color: #ffffff;
-    color: #000000;
+    background-color: var(--white);
+    color: var(--black);
     border: none;
     outline: none;
 }
@@ -124,8 +116,8 @@ button[type="submit"]{
     outline: none;
     border-radius: 5px;
     margin-top: 1rem;
-    background-color: gold;
-    color: black;
+    background-color: var(--gold);
+    color: var(--black);
     width: 100%;
     border:none;
     cursor: pointer;

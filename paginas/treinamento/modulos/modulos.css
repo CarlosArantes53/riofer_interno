@@ -7,7 +7,7 @@
     list-style: none;
 }
 body{
-    background-color: #04051D;
+    background-color: var(--blue-body);
     width: 100vw;
     height: 100vh;
     overflow-y: scroll;
@@ -23,7 +23,7 @@ a#logout{
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #ff0000;
+    color: var(--red);
     text-decoration: none;
     font-size: 22px;
     transition: 0.3s ease;
@@ -38,8 +38,8 @@ a#logout img{
 article#Training-Box{
     display: flex;
     flex-direction: column;
-    background-color: #111111;
-    color: #fff;
+    background-color: var(--black-ink);
+    color: var(--white);
     border-radius: 15px;
     width: max(300px,20vw);
     
@@ -70,7 +70,7 @@ div.inputs-texts input{
     outline: none;
 }
 div.inputs-texts input:focus{
-    border: gold solid 3px;
+    border: var(--gold) solid 3px;
 }
 div.inputs-texts textarea{
     border-radius: 5px;
@@ -79,10 +79,10 @@ div.inputs-texts textarea{
     outline: none;
 }
 div.inputs-texts textarea:focus{
-    border: gold 3px solid;
+    border: var(--gold) 3px solid;
 }
 div.inputs-texts button{
-    background-color: gold;
+    background-color: var(--gold);
     border-radius: 5px;
     border: none;
     outline: none;
@@ -106,8 +106,8 @@ div.div-father{
     padding: 50px;
 }
 div.texts-modules{
-    background-color: rgb(24, 24, 24);
-    color: #fff;
+    background-color: var(--black-ink);
+    color: var(--white);
     width: 17vw;
     height: 450px;
     padding: 0;
@@ -115,20 +115,20 @@ div.texts-modules{
     overflow-x: hidden;
 }
 div.texts-modules h3{
-    border-bottom: grey solid 1px;
+    border-bottom: var(--gray) solid 1px;
     padding: 10px;
 }
 div.texts-modules li{
-    border-bottom: grey solid 1px;
+    border-bottom: var(--gray) solid 1px;
     padding: 10px;
 }
 ::-webkit-scrollbar{
-    background: #202020; /* Cor da parte que você arrasta */
+    background: var(--black-carbon); /* Cor da parte que você arrasta */
     border-radius: 5px; /* Bordinhas arredondadas */
     width: 5px;
   }
   ::-webkit-scrollbar-thumb{
-    background-color: gold;
+    background-color: var(--gold);
     border-radius: 5px;
   }
   @media (max-width:1000px){
@@ -141,12 +141,12 @@ div.texts-modules li{
         width: 100%;
     }
     body::-webkit-scrollbar{
-        background: #101010; /* Cor da parte que você arrasta */
+        background: var(--black-ink); /* Cor da parte que você arrasta */
         border-radius: 10px; /* Bordinhas arredondadas */
         width: 5px;
       }
       body::-webkit-scrollbar-thumb{
-        background-color: #303030;
+        background-color: var(--black-jet);
       }
       article#Training-Box{
         width: 100%;

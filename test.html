@@ -1,63 +1,31 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alterar Tema</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        body {
-            margin: 0;
-            transition: background-color 0.3s, color 0.3s;
-        }
-        .container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            text-align: center;
-        }
-        .icon {
-            font-size: 3rem;
-            cursor: pointer;
-        }
-        .light-mode {
-            background-color: yellow;
-            color: black;
-        }
-        .dark-mode {
-            background-color: #2c3e50;
-            color: white;
-        }
-    </style>
+    <title>Redimensionar Imagem</title>
 </head>
-<body class="light-mode">
-    <div class="container">
-        <i class="fa-solid fa-sun icon" onclick="toggleTheme()"></i>
-        <i class="fa-solid fa-moon icon" onclick="toggleTheme()" style="display: none;"></i>
-    </div>
+<body>
+
+    <img id="minhaImagem" src="/paginas/home/images-home/7.jpg" alt="Imagem Exemplo" style="width: 800px; height: auto;">
+
+    <button onclick="diminuirImagem()">Diminuir Imagem</button>
 
     <script>
-        function toggleTheme() {
-            const body = document.body;
-            const sunIcon = document.querySelector('.fa-sun');
-            const moonIcon = document.querySelector('.fa-moon');
-
-            if (body.classList.contains('light-mode')) {
-                body.classList.remove('light-mode');
-                body.classList.add('dark-mode');
-                sunIcon.style.display = 'none';
-                moonIcon.style.display = 'inline';
-            } else {
-                body.classList.remove('dark-mode');
-                body.classList.add('light-mode');
-                sunIcon.style.display = 'inline';
-                moonIcon.style.display = 'none';
-            }
+        function diminuirImagem() {
+            // Seleciona a imagem pelo id
+            const imagem = document.getElementById('minhaImagem');
+            
+            // Define um novo tamanho para a imagem
+            imagem.style.width = '150px';  // Aqui você pode ajustar a largura como preferir
+            imagem.style.height = 'auto';  // Mantém a proporção da imagem
         }
     </script>
+
 </body>
 </html>
+
 
 
 <!--https://fontawesome.com/search?o=r&m=free-->

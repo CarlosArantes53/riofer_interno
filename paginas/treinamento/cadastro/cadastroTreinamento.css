@@ -7,7 +7,7 @@
     outline: none;
 }
 body{
-    background-color: #04051D;
+    background-color: var(--blue-body);
     width: 100vw;
     height: 100vh;
 }
@@ -21,7 +21,7 @@ a#logout{
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #ff0000;
+    color: var(--red);
     text-decoration: none;
     font-size: 22px;
     transition: 0.3s ease;
@@ -34,8 +34,8 @@ a#logout img{
     transform: rotate(179.5deg);
 }
 form{
-    background-color: #04051D;
-    border: gold 3px solid;
+    background-color: var(--blue-body);
+    border: var(--gold) 3px solid;
     padding: 20px 40px;
     padding-bottom: 50px;
     max-width: 600px;
@@ -51,7 +51,7 @@ form#curso-form button{
     padding: 10px;
     border-radius: 10px;
     width: 100%;
-    background-color: gold;
+    background-color: var(--gold);
     font-size: 17px;
     margin-top: 10px;
 }
@@ -63,12 +63,12 @@ form#curso-form button:hover {
    transition: 0.3s ease;
 }
 label,p,h2{
-    color: #fff;
+    color: var(--white);
 }
 form input{
-    background-color: #fff;
+    background-color: var(--white);
     border: none;
-    color: #000;
+    color: var(--black);
     padding: 10px;
     width: 100%;
     border-radius: 5px;
@@ -77,25 +77,25 @@ form input{
 form textarea{
     outline: none;
     border-radius: 5px;
-    background-color: #fff;
+    background-color: var(--white);
     border: none;
-    color: #000;
+    color: var(--black);
     width: 100%;
     box-sizing: border-box;
     transition: .3s;
 }
 option{
     font-size: 20px;
-    background-color: #fff;
+    background-color: var(--white);
     border: none;
     border-radius: 5px;
     color: #000;
 }
 select{
-    background-color: #fff;
+    background-color: var(--white);
     border: none;
     width: 100%;
-    color: #000;
+    color: var(--black);
     outline: none;
 }
 #categoria{

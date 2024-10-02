@@ -7,7 +7,7 @@
     font-family: 'poppins', sans-serif;
 }
 body{
-    background-color: #04051D;
+    background-color: var(--blue-body);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -26,7 +26,7 @@ a#logout{
     align-items: center;
     width: 100%;
     text-decoration: none;
-    color: #ff0000;
+    color: var(--red);
     font-size: 22px;
     transition: 0.3s ease;
 }
@@ -38,18 +38,18 @@ a#logout img{
     transform: rotate(179.5deg);
 }
 form#Blog-form span{
-    color: red;
+    color: var(--red);
 }
 form#Blog-form h2{
-    color: #fff;
+    color: var(--white);
     text-align: center;   
     font-family: 'poppins', sans-serif;
     font-size: 30px;
 }
 form#Blog-form{
-    background-color: #04051D;
-    border: solid 4px gold;
-    color: #fff;
+    background-color: var(--blue-body);
+    border: solid 4px var(--gold);
+    color: var(--white);
     font-family: 'poppins', sans-serif;
     margin-top: 1vh;
     padding: 20px 40px;
@@ -85,14 +85,14 @@ form#Blog-form textarea#descricao{
     font-size: 15px;
 }
 form#Blog-form input#imagem{   
-    background-color: #fff;
-    color: #000;
+    background-color: var(--white);
+    color: var(--black);
     border: none;
     outline: none;
 }
 form#Blog-form button{
     margin-top: 1rem;
-    background-color: gold;
+    background-color: var(--gold);
     padding: 10px;
     border-radius: 5px;
     border: none;

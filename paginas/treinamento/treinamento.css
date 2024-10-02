@@ -7,7 +7,7 @@
 }
 
 body{
-    background-color: #fff;
+    background-color: var(--white);
     width: 100vw;
     height: 100vh;
     overflow-x: hidden;
@@ -18,7 +18,7 @@ header .header-training{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-color: #04051D;
+    background-color: var(--blue-body);
 }
 @media screen and (max-width: 710px){
     header .header-training{
@@ -36,7 +36,7 @@ nav.nav-header:hover{
     filter: brightness(50%);
 }
 nav.nav-header a{
-    color: #fff;
+    color: var(--white);
     font-size: 23px;
     font-family: 'poppins', sans-serif;
 }
@@ -67,7 +67,7 @@ div#main-content{
     flex-direction: column;
     align-items: center;
     font-size: 23px;
-    color: rgb(255, 255, 255);
+    color: var(--white);
     font-family: 'poppins', sans-serif;
     transition: 0.2s ease-in-out;
 }
@@ -95,10 +95,10 @@ li {
     width: 200px;
     height: 100%;
     border-radius: 20px;
-    background-color: #04051D;
+    background-color: var(--blue-body);
     font-family: 'poppins', sans-serif;
     text-align: center;
-    color: white;
+    color: var(--white);
     font-size: 14px;
     margin: auto;
 }
@@ -111,12 +111,12 @@ img.curso-imagem {
 }
 
 li a{
-    color: white;
+    color: var(--white);
     text-decoration: none;
-    border-top: white solid 2px;
+    border-top: var(--white) solid 2px;
 }
 h2{
-    color: #fff;
+    color: var(--white);
     font-family: 'poppins', sans-serif;
     text-align: center;
 }
@@ -128,9 +128,9 @@ footer{
 }
 
 p.text-rights{
-    border-top: solid 2px #9696969c;
+    border-top: solid 2px var(--gray);
     width: 100%;
-    background-color: gold;
+    background-color: var(--gold);
     display: flex;
     justify-content: center;
     align-items: center;

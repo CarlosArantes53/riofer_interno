@@ -14,8 +14,8 @@
 
     <header>
         <div class="icon-exit">
-            <a id="logout" href="../home/home.html">
-                <img src="../home/images-home/icon-exit.7bfce337.svg" alt="icon-exit">
+            <a id="logout" href="../home/home.html" aria-label="Voltar para a página inicial">
+                <img src="../home/images-home/icon-exit.7bfce337.svg" alt="Ícone de saída">
                 Voltar
             </a>
         </div>
@@ -26,64 +26,85 @@
             <h1>Cadastro</h1>
             <!-- Formulário para cadastro de setor --> 
             <form id="cadastroForm">
+                <!-- Campo Nome -->
                 <div class="campo-nome">
                     <label for="nome">Nome:</label>
                     <input type="text" id="nome" name="nome" required>
                 </div>
+
+                <!-- Campo Cargo -->
                 <div class="campo-cargo">
                     <label for="cargo">Cargo:</label>
                     <input type="text" id="cargo" name="cargo" required>
                 </div>
+
+                <!-- Campo Data de Nascimento -->
                 <div class="campo-nascimento">
                     <label for="nascimento">Data de Nascimento:</label>
                     <input type="date" id="nascimento" name="nascimento" required>
                 </div>
+
+                <!-- Campo Selecionar Usuário -->
+                <div class="campo-usuario">
+                    <label for="selectUsuario">Selecionar usuário:</label>
+                    <select id="selectUsuario" name="selectUsuario" required>
+                        <!-- Opções serão adicionadas via JavaScript -->
+                    </select>
+                </div>
+
+                <!-- Campo Tipo de Usuário -->
+                <div class="campo-tipo">
+                    <label for="tipoUsuario">Tipo de Usuário:</label>
+                    <select id="tipoUsuario" name="tipoUsuario" required>
+                        <option value="Administrador">Administrador</option>
+                        <option value="Gerente">Gerente</option>
+                        <option value="Colaborador">Colaborador</option>
+                    </select>
+                </div>
+
+                <!-- Campo Setor -->
+                <div class="campo-setor">
+                    <label for="setorUsuario">Setor:</label>
+                    <select id="setorUsuario" name="setorUsuario" required>
+                        <!-- Setores preenchidos via JavaScript -->
+                    </select>
+                </div>
+
+                <!-- Campo Email -->
                 <div class="campo-email">
                     <label for="email">Email:</label>
                     <input type="email" id="email" name="email" required>
                 </div>
+
+                <!-- Campo Senha -->
                 <div class="campo-senha">
                     <label for="senha">Senha:</label>
                     <input type="password" id="senha" name="senha" required>
                 </div>
+
                 <!-- Botões de ação -->
                 <button type="submit" id="btnCadastrar">Cadastrar</button>
                 <button type="button" id="btnSalvarEdicao" style="display: none;">Salvar Edição</button>
+
+                <!-- Mensagem de erro -->
                 <p id="error-message" style="color: red;"></p> 
             </form>
         </div>
-    </div>
 
+        <!-- Formulário para cadastro de setor -->
+        <div class="campo-father">
+            <div class="campo-setor">
+                <label for="nomeSetor">Nome do Setor:</label>
+                <input type="text" id="nomeSetor" name="nomeSetor" required>    
+                <button type="button" id="btnCadastrarSetor">Cadastrar Setor</button>
 
-<div class="campo-father">
-    <div class="campo-setor">
-        <label for="nomeSetor">Nome do Setor:</label>
-        <input type="text" id="nomeSetor" name="nomeSetor" required>    
-<!-- Lista suspensa para selecionar usuários -->
-<label for="selectUsuario">Selecionar usuário:</label>
-<select id="selectUsuario">
-    <option value="">Novo Cadastro</option>
-</select>
-
-    <div class="campo-tipo">
-        <label for="tipoUsuario">Tipo de Usuário:</label>
-        <select id="tipoUsuario" name="tipoUsuario" required>
-            <option value="Administrador">Administrador</option>
-            <option value="Gerente">Gerente</option>
-            <option value="Colaborador">Colaborador</option>
-        </select>
-        <div class="campo-setor">
-            <label for="setorUsuario">Setor:</label>
-            <select id="setorUsuario" name="setorUsuario" required>
-                <!-- Setores preenchidos via JavaScript -->
-            </select>
+                <!-- Mensagem de erro do setor -->
+                <p id="setor-error-message" style="color: red;"></p>
+            </div>
         </div>
-        <button type="button" id="btnCadastrarSetor">Cadastrar Setor</button>
-        <p id="setor-error-message" style="color: red;"></p>
-    </div>
-    </div>
     </section>
 
+    <!-- Scripts do Firebase e de cadastro -->
     <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-auth-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-database-compat.js"></script> 

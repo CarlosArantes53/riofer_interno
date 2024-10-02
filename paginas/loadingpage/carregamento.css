@@ -9,7 +9,7 @@ div#loading-page.loader{
   align-items: center;
   height: 100%;
   width: 100%;
-  background-color: #04051D;
+  background-color: var(--blue-body);
   position: fixed;
   top: 0;
   left: 0;
@@ -28,11 +28,11 @@ div#loading-page.loader{
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #ffc400;
+  background-color: var(--gold);
   font-family: Arial, sans-serif;
   font-size: 2rem;
   font-weight: bold;
-  color: #04051D;
+  color: var(--blue-body);
   opacity: 0;
   animation: fadeIn 3s infinite;
 
