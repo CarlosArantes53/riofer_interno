@@ -10,6 +10,7 @@
 }
 
 body{
+    background: #ffffff;
     color: #04051D;
     font-size: 12px;
     width: 100vw;
@@ -111,7 +112,7 @@ div.sidebar a{
 div.sidebar a:hover{
     filter: brightness(20%);
 }
-section.section-welcome{
+section {
     width: 100%;
     height: 40vh;
     background-color: gold;
@@ -128,19 +129,17 @@ div.texts-welcome{
     font-size: 1.5vw;   
     color: #000;
 }
-@media (max-width:820px){
+@media (max-width:450px){
     .texts-welcome{
         display: none;
-    }
-    section.section-welcome{
-        height: auto;
     }
 }
 .user-info{
     color: #fff;
-    font-size: max(20px,3vw);
     font-weight: 500;    
     color: #000;
+    font-size: 2vw;
+    margin-left: 17.5vw;    
 }
 @media (max-width:450px){
         .user-info{
@@ -192,13 +191,13 @@ main h1{
 main{
     padding: 0 0 80px 0;
 }
+
 main .blogs-container {
     display: grid ;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 3fr)); 
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
     gap: 4.8rem;
-    max-width: 1500px;
-    margin: auto;
-    
+    max-width: 1200px;
+    margin: auto;   
 }
 
 section.container-slide{
