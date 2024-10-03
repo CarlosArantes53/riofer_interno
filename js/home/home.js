@@ -175,4 +175,3 @@ function desativarBotaoSelecionado() {
       botoes[indexAtual].classList.add('selecionado');
     });
   });
-
