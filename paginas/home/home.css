@@ -17,6 +17,15 @@ body{
     overflow: auto;
     overflow-x: hidden;
 }   
+body::-webkit-scrollbar{
+    background: var(--black-ink); /* Cor da parte que você arrasta */
+    border-radius: 10px; /* Bordinhas arredondadas */
+    width: 5px;
+  }
+  body::-webkit-scrollbar-thumb{
+    background-color: transparent;
+    border-radius: 10px;
+  }
 div#main-content{
     width: 100vw;
 }
@@ -125,7 +134,18 @@ div.sidebar{
     flex-direction: column;
     text-align: center;
     z-index: 1000;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
+div.sidebar::-webkit-scrollbar{
+    background: var(--black-ink); /* Cor da parte que você arrasta */
+    border-radius: 10px; /* Bordinhas arredondadas */
+    width: 12px;
+  }
+  div.sidebar::-webkit-scrollbar-thumb{
+    background-color: var(--gold);
+    border-radius: 10px;
+  }
 div.sidebar a{
     width: 100%;
     margin-top: 50px;
